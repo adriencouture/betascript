@@ -14,7 +14,7 @@ class UserSessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    logout
     redirect_to projects_path, notice: 'Logged out!'
   end
 end
