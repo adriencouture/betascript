@@ -1,2 +1,8 @@
 <h2><%= @project.title %></h2>
 <p><%= @project.description %></p>
+
+  <h3>Comments:</h3>
+    <%= render partial: "comments" %>
+
+  <h3>Leave a Comment. Be Beta.</h3>
+    <%= render partial: "create_comment" %>

@@ -4,9 +4,6 @@ class CommentsController < ApplicationController
   # load the project so that you can comment on said project
   before_action :load_project
 
-
-
-
   def create
     @comment = @project.comments.build(comment_params)
     @comment.user = current_user
@@ -33,7 +30,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comments).permit(:comment, :project_id)
+    params.require(:comment).permit(:comment, :project_id)
   end
 
   def load_project
