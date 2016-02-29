@@ -7,6 +7,21 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+
+    if @project.update_attributes(product_params)
+      redirect_to project_path(@project)
+    else
+      render :edit
+    end
+
+  end
+
   def create
     @project = Project.new(project_params)
     @project.user = current_user
