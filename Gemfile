@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Sorcery is a bare-bones authentication library, with which you can write your own authentication flow
 gem 'sorcery'
 
+# Simple and flexible way to upload files from Ruby applications.
+# gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
