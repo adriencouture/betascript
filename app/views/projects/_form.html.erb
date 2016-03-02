@@ -31,6 +31,12 @@
     <%= f.text_field :genre %>
   </div>
 
+  <div class="field">
+    <%= f.label :cover_image %>
+    <%= f.file_field :cover_image %>
+    <%= f.hidden_field :cover_image_cache %>
+  </div>
+
   <h2>Tags</h2>
 
   <%= f.fields_for :tags, Tag.new do |tag_field| %>

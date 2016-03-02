@@ -46,6 +46,11 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -78,6 +83,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.99.1)
+    mini_magick (4.4.0)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
@@ -174,8 +180,10 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   byebug
+  carrierwave
   jbuilder (~> 2.0)
   jquery-rails
+  mini_magick
   pry-rails
   rails (= 4.2.5)
   sass-rails (~> 5.0)
