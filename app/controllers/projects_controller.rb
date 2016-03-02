@@ -33,6 +33,16 @@ class ProjectsController < ApplicationController
 
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    if @project.user == current_user
+      @project.destroy
+      redirect_to projects_path
+    else
+      redirect_to project_path, notice: "This project isn't yours; you can't delete it!"
+    end
+  end
+
   def create
     @project = Project.new(project_params)
     @project.user = current_user
