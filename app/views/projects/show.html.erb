@@ -1,6 +1,14 @@
+<%= image_tag @project.cover_image.url(:show) %>
 <h2><%= @project.title %></h2>
 <p>Description: <br><%= @project.description %></p>
 <p>Story: <br> <%= @project.story %></p>
+
+<p>
+  Tags:
+  <% @project.tags.each do |t| %>
+    <%= t.title %>
+  <% end %>
+</p>
 
 <div id="comment-list">
   <h3>Comments:</h3>

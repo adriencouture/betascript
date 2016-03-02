@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+
+
   def index
     @projects = if params[:search]
       Project.where("LOWER(title) LIKE LOWER(?)", "%#{params[:search]}%")
@@ -52,7 +54,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :story, :genre, :cover_image, :cover_image_cache, tags_attributes: [:title])
+    params.require(:project).permit(:title, :description, :story, :genre, :cover_image, :cover_image_cache, :remove_cover_image, tags_attributes: [:title])
   end
 
 end

@@ -33,9 +33,13 @@
 
   <div class="field">
     <%= f.label :cover_image %>
+    <%= image_tag(@project.cover_image.url(:show)) if @project.cover_image? %>
     <%= f.file_field :cover_image %>
     <%= f.hidden_field :cover_image_cache %>
+    Remove Image
+    <%= f.check_box :remove_cover_image %>
   </div>
+
 
   <h2>Tags</h2>
 
