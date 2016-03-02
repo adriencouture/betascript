@@ -18,9 +18,9 @@ class TagsController < ApplicationController
   private
 
   # params so that people can't abuse the add tag form; has to be 'title'
-  def tag_params
-    params.require(:tag).permit(:title)
-  end
+  # def tag_params
+  #   params.require(:tag).permit(:title)
+  # end
 
 
 

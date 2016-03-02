@@ -31,6 +31,15 @@
     <%= f.text_field :genre %>
   </div>
 
+  <h2>Tags</h2>
+
+  <%= f.fields_for :tags, Tag.new do |tag_field| %>
+  <div class="field">
+    <%= tag_field.label :title %>
+    <%= tag_field.text_field :title %>
+  </div>
+  <% end %>
+
   <div class="action">
     <%= f.submit "Create Project" %>
   </div>

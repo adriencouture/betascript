@@ -10,6 +10,7 @@
 
   <div id="nav">
     <% if current_user %>
+      <%= link_to "Home", projects_path %>
       <%= link_to "#{current_user.first_name}'s profile", user_path(current_user.id) %>
       <%= link_to "Logout", :logout, method: :post %>
     <% else %>
