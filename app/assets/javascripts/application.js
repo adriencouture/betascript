@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require rangy-core
+//= require rangy-classapplier
+//= require rangy-highlighter
+//= require rangy-selectionsaverestore
+//= require rangy-serializer
+//= require rangy-textrange
 //= require_tree .
