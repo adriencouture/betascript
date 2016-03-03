@@ -19,10 +19,14 @@ $(document).on('ready page:load', function() {
     return document.getElementById(id);
   }
 
-  var italicYellowBgApplier
+  var italicYellowBgApplier, characterApplier
 
   function toggleItalicYellowBg() {
     italicYellowBgApplier.toggleSelection();
+  }
+
+  function toggleCharacter() {
+    characterApplier.toggleSelection();
   }
 
   window.onload = function() {
@@ -34,10 +38,21 @@ $(document).on('ready page:load', function() {
       tagNames: ['span', 'a', 'b']
     });
 
+    characterApplier = rangy.createCssClassApplier('character', {
+      tagNames: ['span', 'a', 'b']
+    });
+
     var toggleItalicYellowBgButton = gEBI('toggleItalicYellowBgButton');
     toggleItalicYellowBgButton.disabled = false;
     toggleItalicYellowBgButton.ontouchstart = toggleItalicYellowBgButton.onmousedown = function() {
       toggleItalicYellowBg();
+      return false;
+    };
+
+    var characterButton = gEBI('characterButton');
+    characterButton.disabled = false;
+    characterButton.ontouchstart = characterButton.onmousedown = function() {
+      toggleCharacter();
       return false;
     };
   }
