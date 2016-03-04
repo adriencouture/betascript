@@ -19,4 +19,5 @@
 //= require rangy-selectionsaverestore
 //= require rangy-serializer
 //= require rangy-textrange
+//= require cocoon
 //= require_tree .

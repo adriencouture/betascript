@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Sorcery is a bare-bones authentication library, with which you can write your own authentication flow
 gem 'sorcery'
 
+# Cocoon makes it easier to handle nested forms.
+gem 'cocoon'
+
 # Simple and flexible way to upload files from Ruby applications.
 gem 'carrierwave'
 gem 'mini_magick'
