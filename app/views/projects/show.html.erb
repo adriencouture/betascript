@@ -1,10 +1,11 @@
 <%= image_tag @project.cover_image.url(:show) %>
 <h2><%= @project.title %></h2>
 <p><strong>Description: </strong><br><%= @project.description %></p>
+
 <div id="story-text"><p><strong>Story: </strong></p><br>
-  <% story_array = @project.story.split("\r\n") %>
-  <% story_array.each do |para| %>
-  <p><%= para %></p>
+    <% story_array = @project.story.split("\r\n") %>
+    <% story_array.each do |para| %>
+    <p><%= para %></p>
   <% end %>
 
 </div>
