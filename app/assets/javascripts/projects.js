@@ -3,6 +3,7 @@
 
 $(document).on('ready page:load', function() {
 
+
   $('#search-form').on('submit', function(event){
     event.preventDefault();
 
@@ -14,6 +15,7 @@ $(document).on('ready page:load', function() {
       dataType: 'script'
     });
   });
+
 
   function gEBI(id) {
     return document.getElementById(id);
@@ -29,16 +31,15 @@ $(document).on('ready page:load', function() {
     characterApplier.toggleSelection();
   }
 
-  window.onload = function() {
     rangy.init();
 
     var classApplierModule = rangy.modules.ClassApplier || rangy.modules.CssClassApplier;
 
-    italicYellowBgApplier = rangy.createCssClassApplier('italicYellowBg', {
+    italicYellowBgApplier = rangy.createClassApplier('italicYellowBg', {
       tagNames: ['span', 'a', 'b']
     });
 
-    characterApplier = rangy.createCssClassApplier('character', {
+    characterApplier = rangy.createClassApplier('character', {
       tagNames: ['span', 'a', 'b']
     });
 
@@ -55,6 +56,6 @@ $(document).on('ready page:load', function() {
       toggleCharacter();
       return false;
     };
-  }
+  
 
 });
