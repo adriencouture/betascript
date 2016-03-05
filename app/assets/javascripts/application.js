@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require cocoon
 //= require turbolinks
 //= require rangy-core
 //= require rangy-classapplier
@@ -19,5 +20,4 @@
 //= require rangy-selectionsaverestore
 //= require rangy-serializer
 //= require rangy-textrange
-//= require cocoon
 //= require_tree .

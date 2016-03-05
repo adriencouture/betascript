@@ -1,0 +1,27 @@
+<h1>Create your Script, Get your Beta on</h1>
+
+<%= form_for ([@project, @script]) do |f| %>
+  <div id="scenes">
+    <%= f.fields_for :scenes do |scene_fields| %>
+      <%= render "scene_fields", f: scene_fields %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add scene', f, :scenes %>
+    </div>
+  </div>
+
+  <div id="characters">
+    <%= f.fields_for :characters do |character_fields| %>
+      <%= render "character_fields", f: character_fields %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add character', f, :characters %>
+    </div>
+  </div>
+
+  <div class="action">
+    <%= f.submit "Create Script!" %>
+  </div>
+<% end %>

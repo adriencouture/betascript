@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   resources :projects do
     resources :comments, only: [:create, :show, :destroy]
     resources :tags, only: [:index, :create, :update, :destroy]
+
+
+    resources :scripts do
+      resources :scenes, only: [:new, :create, :update, :destroy]
+      resources :characters
+    end
   end
 
   get 'login' => 'user_sessions#new', :as => :login
