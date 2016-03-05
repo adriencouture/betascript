@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 20160304222717) do
     t.text     "description"
     t.string   "genre"
     t.integer  "user_id"
-    t.string   "cover_image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "cover_image"
   end
 
   add_index "projects", ["user_id"], name: "index_projects_on_user_id"
