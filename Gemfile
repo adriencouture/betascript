@@ -46,6 +46,7 @@ group :development, :test do
   gem 'byebug'
   gem 'better_errors'
   gem 'pry-rails'
+  gem 'letter_opener', group: :development
 end
 
 group :development do

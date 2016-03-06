@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+
   skip_before_action :require_login, only: [:index, :new, :create]
+
   def index
     @user = User.all
   end
@@ -11,6 +13,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      auto_login(@user)
+
+      UserMailer.welcome_email(@user).deliver_later
+
       # session[:user_id] = user.id
       redirect_to projects_path, notice: "Account was successfully created"
     else
