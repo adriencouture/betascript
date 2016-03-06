@@ -1,0 +1,29 @@
+<h3>New Scene</h3>
+
+<%= form_for [@project, @scene] do |f| %>
+
+  <div class="field">
+    <%= f.label :heading %><br>
+    <%= f.text_field :heading %>
+  </div>
+
+  <div class="field">
+    <%= f.label :action %><br>
+    <%= f.text_area :action %>
+  </div>
+
+  <div id="characters">
+    <%= f.fields_for :characters do |character_fields| %>
+      <%= render "character_fields", f: character_fields %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add character', f, :characters %>
+    </div>
+  </div>
+
+  <div class="action">
+    <%= f.submit "Create Scene" %>
+  </div>
+
+<% end %>

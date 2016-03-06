@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ScriptTest < ActiveSupport::TestCase
+class ScenesControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

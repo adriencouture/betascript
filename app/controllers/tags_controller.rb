@@ -22,6 +22,4 @@ class TagsController < ApplicationController
   #   params.require(:tag).permit(:title)
   # end
 
-
-
 end

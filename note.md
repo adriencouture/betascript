@@ -1,6 +1,4 @@
-<h1>Create your Script, Get your Beta on</h1>
-
-<%= form_for ([@project, @script]) do |f| %>
+<%= form_for ([@project, @scene]) do |f| %>
   <div id="scenes">
     <%= f.fields_for :scenes do |scene_fields| %>
       <%= render "scene_fields", f: scene_fields %>
@@ -24,4 +22,17 @@
   <div class="action">
     <%= f.submit "Create Script!" %>
   </div>
+<% end %>
+
+
+<% current_scene.characters.each do |character| %>
+  <p>
+    <%= character.name %>
+  </p>
+  <p>
+    <%= character.parenthetical %>
+  </p>
+  <p>
+    <%= character.dialogue %>
+  </p>
 <% end %>

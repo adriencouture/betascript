@@ -55,7 +55,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @script = Script.new
+    @scene = Scene.new
 
     if current_user
       @comment = Comment.new
@@ -65,7 +65,9 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :genre, :cover_image, :cover_image_cache, :remove_cover_image, tags_attributes: [:title])
+    params.require(:project)
+          .permit(:title, :description, :genre, :cover_image, :cover_image_cache, :remove_cover_image,
+                  tags_attributes: [:title])
   end
 
 end

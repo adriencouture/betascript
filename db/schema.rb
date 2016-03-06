@@ -11,20 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160304222717) do
+ActiveRecord::Schema.define(version: 20160305223512) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
     t.text     "dialogue"
     t.text     "parenthetical"
-    t.integer  "script_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "scene_id"
   end
 
   add_index "characters", ["scene_id"], name: "index_characters_on_scene_id"
-  add_index "characters", ["script_id"], name: "index_characters_on_script_id"
 
   create_table "comments", force: :cascade do |t|
     t.text     "comment"
@@ -60,20 +58,12 @@ ActiveRecord::Schema.define(version: 20160304222717) do
   create_table "scenes", force: :cascade do |t|
     t.string   "heading"
     t.text     "action"
-    t.integer  "script_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  add_index "scenes", ["script_id"], name: "index_scenes_on_script_id"
-
-  create_table "scripts", force: :cascade do |t|
     t.integer  "project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
-  add_index "scripts", ["project_id"], name: "index_scripts_on_project_id"
+  add_index "scenes", ["project_id"], name: "index_scenes_on_project_id"
 
   create_table "tags", force: :cascade do |t|
     t.string   "title"

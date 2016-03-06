@@ -1,0 +1,17 @@
+<%= form_for [@project, @scene] do |f| %>
+
+  <div class="field">
+    <%= f.label :heading %>
+    <%= f.text_field :heading %>
+  </div>
+
+  <div class="field">
+    <%= f.label :action %>
+    <%= f.text_area :action %>
+  </div>
+
+  <div class="action">
+    <%= f.submit "Create Scene" %>
+  </div>
+
+<% end %>
