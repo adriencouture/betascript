@@ -35,3 +35,18 @@
 #script-container {
   float: left;
 }
+
+.scene-heading {
+  text-transform: uppercase;
+}
+
+.scene-action {
+  font-style: italic;
+}
+
+.character-name {
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
