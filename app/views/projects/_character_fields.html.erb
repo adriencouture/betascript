@@ -1,17 +1,17 @@
 <div class="nested-fields">
   <div class="field">
     <%= f.label :name %>
-    <div class="clear-me"><%= f.text_field :name %></div>
+    <div class="clear-me"><%= f.text_field :name, :placeholder => "Name" %></div>
   </div>
 
   <div class="field">
     <%= f.label :parenthetical %>
-    <div class="clear-me"><%= f.text_area :parenthetical %></div>
+    <div class="clear-me"><%= f.text_area :parenthetical, :placeholder => "Parenthetical" %></div>
   </div>
 
   <div class="field">
     <%= f.label :dialogue %>
-    <div class="clear-me"><%= f.text_area :dialogue %></div>
+    <div class="clear-me"><%= f.text_area :dialogue, :placeholder => "Dialogue" %></div>
   </div>
 
   <%= link_to_remove_association "Remove Character", f %>

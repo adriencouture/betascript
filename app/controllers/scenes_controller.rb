@@ -31,6 +31,21 @@ class ScenesController < ApplicationController
     @scene = Scene.find(params[:id])
   end
 
+  def edit
+    @scene = Scene.find(params[:id])
+  end
+
+  def update
+    @scene = Scene.find(params[:id])
+
+    if @scene.update_attributes(scene_params)
+      redirect_to project_path(@project)
+    else
+      render 'projects/edit'
+    end
+
+  end
+
 private
 
   def scene_params

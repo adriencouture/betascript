@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
 
+  before_action :check_user, only: [:edit, :update]
 
   def index
     @projects = if params[:search]
@@ -45,7 +46,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @project.user == current_user
+    @project.user = current_user
     if @project.save
       redirect_to projects_path, notice: "Your project was created successfully!"
     else
@@ -68,6 +69,12 @@ class ProjectsController < ApplicationController
     params.require(:project)
           .permit(:title, :description, :genre, :cover_image, :cover_image_cache, :remove_cover_image,
                   tags_attributes: [:title])
+  end
+
+  def check_user
+    unless current_user
+      redirect_to project_path(params[:id]), notice: "You do not have access to edit this project"
+    end
   end
 
 end

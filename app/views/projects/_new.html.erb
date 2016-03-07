@@ -1,4 +1,3 @@
-
 <% if @project.user == current_user %>
   <h3>New Scene</h3>
 
@@ -6,12 +5,12 @@
 
     <div class="field">
       <%= f.label :heading %><br>
-      <%= f.text_field :heading %>
+      <%= f.text_field :heading, :placeholder => "Scene heading" %>
     </div>
 
     <div class="field">
       <%= f.label :action %><br>
-      <%= f.text_area :action %>
+      <%= f.text_area :action, :placeholder => "Action" %>
     </div>
 
     <div id="characters">
