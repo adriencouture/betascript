@@ -8,10 +8,22 @@ class ScenesController < ApplicationController
 
   def create
     @scene = @project.scenes.build(scene_params)
+    # @scene.user = current_user
+
     if @scene.save
-      redirect_to project_path(@project)
+
+      respond_to do |format|
+        format.html do
+          if request.xhr?
+            render @scene
+          else
+            redirect_to project_path(@project)
+          end
+        end
+        format.js
+      end
     else
-      render :new_project_scene_path
+      render 'project_path(@project)'
     end
   end
 

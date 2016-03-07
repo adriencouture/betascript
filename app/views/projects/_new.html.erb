@@ -1,6 +1,6 @@
 <h3>New Scene</h3>
 
-<%= form_for [@project, @scene] do |f| %>
+<%= form_for [@project, @scene], remote: true do |f| %>
 
   <div class="field">
     <%= f.label :heading %><br>

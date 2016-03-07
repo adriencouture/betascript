@@ -1,0 +1,18 @@
+<div class="scene-heading">
+  Scene <%= scene.id %> - <%= scene.heading %>
+</div>
+<div class="scene-action">
+  <%= scene.action %>
+</div>
+
+  <% scene.characters.each  do |char| %>
+    <div class="character-name">
+      <%= char.name %>
+    </div>
+    <div class="character-parenthetical">
+      <%= char.parenthetical %>
+    </div>
+    <div class="character-dialogue">
+      <%= char.dialogue %>
+    </div>
+  <% end %>

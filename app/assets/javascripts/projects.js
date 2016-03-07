@@ -17,45 +17,45 @@ $(document).on('ready page:load', function() {
   });
 
 
-  function gEBI(id) {
-    return document.getElementById(id);
-  }
+  // function gEBI(id) {
+  //   return document.getElementById(id);
+  // }
+  //
+  // var italicYellowBgApplier, characterApplier
+  //
+  // function toggleItalicYellowBg() {
+  //   italicYellowBgApplier.toggleSelection();
+  // }
+  //
+  // function toggleCharacter() {
+  //   characterApplier.toggleSelection();
+  // }
+  //
+  //   rangy.init();
+  //
+  //   var classApplierModule = rangy.modules.ClassApplier || rangy.modules.CssClassApplier;
+  //
+  //   italicYellowBgApplier = rangy.createClassApplier('italicYellowBg', {
+  //     tagNames: ['span', 'a', 'b']
+  //   });
+  //
+  //   characterApplier = rangy.createClassApplier('character', {
+  //     tagNames: ['span', 'a', 'b']
+  //   });
+  //
+  //   var toggleItalicYellowBgButton = gEBI('toggleItalicYellowBgButton');
+  //   toggleItalicYellowBgButton.disabled = false;
+  //   toggleItalicYellowBgButton.ontouchstart = toggleItalicYellowBgButton.onmousedown = function() {
+  //     toggleItalicYellowBg();
+  //     return false;
+  //   };
+  //
+  //   var characterButton = gEBI('characterButton');
+  //   characterButton.disabled = false;
+  //   characterButton.ontouchstart = characterButton.onmousedown = function() {
+  //     toggleCharacter();
+  //     return false;
+  //   };
 
-  var italicYellowBgApplier, characterApplier
-
-  function toggleItalicYellowBg() {
-    italicYellowBgApplier.toggleSelection();
-  }
-
-  function toggleCharacter() {
-    characterApplier.toggleSelection();
-  }
-
-    rangy.init();
-
-    var classApplierModule = rangy.modules.ClassApplier || rangy.modules.CssClassApplier;
-
-    italicYellowBgApplier = rangy.createClassApplier('italicYellowBg', {
-      tagNames: ['span', 'a', 'b']
-    });
-
-    characterApplier = rangy.createClassApplier('character', {
-      tagNames: ['span', 'a', 'b']
-    });
-
-    var toggleItalicYellowBgButton = gEBI('toggleItalicYellowBgButton');
-    toggleItalicYellowBgButton.disabled = false;
-    toggleItalicYellowBgButton.ontouchstart = toggleItalicYellowBgButton.onmousedown = function() {
-      toggleItalicYellowBg();
-      return false;
-    };
-
-    var characterButton = gEBI('characterButton');
-    characterButton.disabled = false;
-    characterButton.ontouchstart = characterButton.onmousedown = function() {
-      toggleCharacter();
-      return false;
-    };
-  
 
 });

@@ -34,6 +34,7 @@
 
 #script-container {
   float: left;
+  width: 60%;
 }
 
 .scene-heading {
@@ -49,4 +50,9 @@
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
+}
+
+#show-container {
+  clear: both;
+  overflow: auto;
 }
