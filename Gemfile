@@ -32,6 +32,10 @@ gem 'cocoon'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'bourbon'
+gem 'neat'
+gem 'autoprefixer-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

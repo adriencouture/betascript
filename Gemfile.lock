@@ -38,6 +38,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
+    autoprefixer-rails (6.3.3.1)
+      execjs
     bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -45,6 +47,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bourbon (4.2.6)
+      sass (~> 3.4)
+      thor (~> 0.19)
     builder (3.2.2)
     byebug (8.2.2)
     carrierwave (0.10.0)
@@ -95,6 +100,9 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    neat (1.7.4)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     oauth (0.5.0)
@@ -184,7 +192,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   better_errors
+  bourbon
   byebug
   carrierwave
   cocoon
@@ -192,6 +202,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   mini_magick
+  neat
   pry-rails
   rails (= 4.2.5)
   sass-rails (~> 5.0)
