@@ -1,9 +1,12 @@
+$visual-grid: true;
+$visual-grid-color: tomato;
+
 // Breakpoints
-// $medium-screen: 600px;
-// $large-screen: 900px;
+$medium-screen: 600px;
+$large-screen: 900px;
 
 // Typography
-$base-font-family: $helvetica;
+$base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes

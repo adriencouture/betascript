@@ -36,3 +36,10 @@
     <%= character.dialogue %>
   </p>
 <% end %>
+
+
+<% if @project.user == current_user %>
+  <div class="edit-scene">
+     <%= link_to "Edit Scene", edit_project_scene_path(params[:id], scene.id), class: "scene-edit", remote: true %>
+  </div>
+<% end %>

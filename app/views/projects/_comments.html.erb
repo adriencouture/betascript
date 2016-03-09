@@ -4,7 +4,7 @@
   <p><%= comment.comment %>
     <% if comment.user != nil %>
       <span id="comment-name"><%= comment.user.first_name %> <%= comment.user.last_name %></span>
-      <span id="comment-time"><%= comment.created_at %></span>
+      <span id="comment-time"><%= comment.created_at.strftime('%b %e, %l:%M %p') %></span>
     <% end %>
   </p>
 <% end %>
