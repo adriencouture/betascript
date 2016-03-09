@@ -25,9 +25,9 @@
 }
 
 #left-sidebar {
-  float: left;
+  // float: left;
   display: inline-block;
-  padding: 0 30px 0 0;
+  padding: 0px 30px 0 0;
 }
 
 #script-container {
@@ -55,8 +55,9 @@
 }
 
 #show-container {
-  clear: both;
-  overflow: auto;
+  padding-top: 40px;
+  // clear: both;
+  // overflow: auto;
 }
 
 input#scene_heading, textarea#scene_action {
@@ -83,18 +84,74 @@ a.add_fields {
 
 .navbar {
   position: fixed;
-  background-color: #5CA4A9;
-  height: 2.5rem;
+  background-color: $basic;
+  height: 3.5rem;
   width: 100%;
   z-index: 2;
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid $light-gray;
 }
 
 .navbar-navigation-left {
   float:left;
-  padding: 10px;
 }
 
 .navbar-navigation-right {
   float:right;
-  padding: 10px;
+}
+
+.navbar-navigation-right li {
+  display: inline;
+  padding-left: 1rem;
+}
+
+#search-feature {
+  padding-top: 3.5rem;
+  background-color: white;
+  width: 100%;
+  border-bottom: 1px solid $light-gray;
+}
+
+#search-input {
+  text-align: center;
+  margin: 8px 0 0 0;
+}
+
+#search {
+  width: 40%;
+  background-color: #f8f8f8;
+}
+
+#new-project {
+  float:left;
+}
+
+#comment-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: $turquoise;
+}
+
+#comment-time {
+  font-size: 0.9rem;
+  color: $medium-gray;
+}
+
+#new-project-button {
+  background-color: $brand;
+  padding: 8px 35px;
+  border-radius: 5px;
+}
+
+#new-project-button a {
+  color: $basic;
+}
+
+#projects {
+  padding: 1rem;
+  margin: 20px;
+}
+
+.project-item {
+  background-color: red;
 }

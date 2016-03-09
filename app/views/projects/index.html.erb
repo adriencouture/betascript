@@ -1,16 +1,16 @@
-<h1>Projects</h1>
-
 <div id="search-feature">
   <%= form_tag projects_path, method: :get, id: 'search-form' do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
+    <div id="search-input">
+      <%= text_field_tag :search, params[:search], :placeholder => "Search Projects" %>
+    </div>
   <% end %>
 </div>
 
-<%= link_to 'New Project', new_project_path %><br>
-
 <div id="projects">
-  <%= render @projects %>
+  <h1>Projects</h1>
+    <ul id="projects-list">
+      <%= render @projects %>
+    </ul>
 </div>
 
 <%= link_to 'All projects', projects_path %>

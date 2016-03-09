@@ -20,7 +20,7 @@ label {
 input,
 select,
 textarea {
-  display: block;
+  // display: block;
   font-family: $base-font-family;
   font-size: $base-font-size;
 }
@@ -57,9 +57,9 @@ select[multiple] {
   }
 }
 
-textarea {
-  resize: vertical;
-}
+// textarea {
+//   resize: vertical;
+// }
 
 [type="search"] {
   appearance: none;

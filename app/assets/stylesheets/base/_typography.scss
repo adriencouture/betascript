@@ -5,19 +5,23 @@ body {
   line-height: $base-line-height;
 }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: $heading-font-family;
-//   font-size: modular-scale(1);
-//   line-height: $heading-line-height;
-//   margin-bottom: 5px;
-// }
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: modular-scale(1);
+  line-height: $heading-line-height;
+  margin-bottom: 5px;
+}
 
 h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: $dark-gray;
+}
+
+h2 {
   margin: 0 0 5px 0;
 }
 
@@ -25,8 +29,20 @@ p {
   margin: 0 0 $small-spacing;
 }
 
-a {
-  color: $action-color;
+// a {
+//   color: $action-color;
+//   text-decoration: none;
+//   transition: color $base-duration $base-timing;
+//
+//   &:active,
+//   &:focus,
+//   &:hover {
+//     color: shade($action-color, 25%);
+//   }
+// }
+
+.navbar a {
+  color: $medium-gray;
   text-decoration: none;
   transition: color $base-duration $base-timing;
 
@@ -35,6 +51,10 @@ a {
   &:hover {
     color: shade($action-color, 25%);
   }
+}
+
+.navbar-navigation-left a {
+  color: $brand;
 }
 
 hr {

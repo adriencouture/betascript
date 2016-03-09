@@ -1,9 +1,10 @@
 <div class="navbar">
   <ul class="navbar-navigation-left">
-    <%= link_to "Home", projects_path %>
+    <li><%= link_to "BetaScript", projects_path %></li>
   </ul>
   <ul class="navbar-navigation-right">
-    <%= link_to "#{current_user.first_name}'s profile", user_path(current_user.id) %>
-    <%= link_to "Logout", :logout, method: :post %>
+    <li id="new-project-button"><%= link_to 'New Project', new_project_path %></li>
+    <li><%= link_to "#{current_user.first_name}'s profile", user_path(current_user.id) %></li>
+    <li><%= link_to "Logout", :logout, method: :post %></li>
   </ul>
 </div>

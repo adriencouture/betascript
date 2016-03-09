@@ -1,3 +1,5 @@
+UNDER _NEW.HTML.ERB > SCRIPT
+
 <%= form_for ([@project, @scene]) do |f| %>
   <div id="scenes">
     <%= f.fields_for :scenes do |scene_fields| %>
@@ -25,6 +27,7 @@
 <% end %>
 
 
+
 <% current_scene.characters.each do |character| %>
   <p>
     <%= character.name %>
@@ -37,9 +40,26 @@
   </p>
 <% end %>
 
-
+UNDER _SCENE.HTML.ERB
 <% if @project.user == current_user %>
   <div class="edit-scene">
      <%= link_to "Edit Scene", edit_project_scene_path(params[:id], scene.id), class: "scene-edit", remote: true %>
   </div>
 <% end %>
+
+UNDER INDEX.HTML.ERB > Search
+  <%= submit_tag "Search" %>
+
+UNDER _TYPOGRAPHY.SCSS
+
+.navbar a {
+  color: $medium-gray;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}

@@ -1,10 +1,9 @@
 <div class="navbar">
-
-    <%= link_to "Home", projects_path %>
-    <%= link_to "#{current_user.first_name}'s profile", user_path(current_user.id) %>
-    <%= link_to "Logout", :logout, method: :post %>
-  <% else %>
+  <ul class="navbar-navigation-left">
+    <li><span id="logo"><%= link_to "BetaScript", projects_path %><span></li>
+  </ul>
+  <ul class="navbar-navigation-right">
     <%= link_to "Register", new_user_path %> |
     <%= link_to "Login", :login %>
-  <% end %>
+  </ul>
 </div>
