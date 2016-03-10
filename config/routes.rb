@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :show, :destroy]
     resources :tags, only: [:index, :create, :update, :destroy]
 
-    resources :scenes, only: [:new, :create, :edit, :update, :destroy] do
+    resources :scenes, only: [:new, :create, :show, :edit, :update, :destroy] do
       resources :characters
     end
   end

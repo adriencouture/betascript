@@ -63,3 +63,10 @@ UNDER _TYPOGRAPHY.SCSS
     color: shade($action-color, 25%);
   }
 }
+
+UNDER APPLICATION.HTML.ERB
+
+<div>
+  <span id="notice"><%= flash[:notice] %></span>
+  <span id="alert"><%= flash[:alert] %></span>
+</div>

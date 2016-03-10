@@ -16,11 +16,11 @@
 
       <div id="characters">
         <%= f.fields_for :characters do |character_fields| %>
-          <%= render "character_fields", f: character_fields %>
+          <%= render partial: "projects/character_fields", locals: {f: character_fields} %>
         <% end %>
 
         <div class="links">
-          <%= link_to_add_association 'add character', f, :characters, {partial: 'scenes/character_fields'} %>
+          <%= link_to_add_association 'add character', f, :characters, {partial: 'projects/character_fields'} %>
         </div>
       </div>
 

@@ -155,3 +155,12 @@ a.add_fields {
 .project-item {
   background-color: red;
 }
+
+#new_project {
+  padding: 1rem;
+  margin: auto;
+  margin-top: 5%;
+  width: 40%;
+  background-color: $light-gray;
+  border-radius: 10px;
+}
