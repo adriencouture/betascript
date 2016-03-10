@@ -51,7 +51,7 @@ private
   def scene_params
     params.require(:scene)
           .permit(:heading, :action,
-                  characters_attributes: [:name, :dialogue, :parenthetical, :_destroy])
+                  characters_attributes: [:id, :name, :dialogue, :parenthetical, :_destroy])
   end
 
   def load_project

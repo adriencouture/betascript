@@ -20,7 +20,6 @@
 
     <% if @project.user == current_user %>
        <div id="edit-scene">
-         <%= link_to '#', project_path(@project, anchor: "scene_#{scene.id}") %>
          <%= link_to "Edit Scene", edit_project_scene_path(@project, scene.id) %>
        </div>
      <% end %>
