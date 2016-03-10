@@ -1,3 +1,4 @@
+
 <div class="nested-fields">
   <div class="field">
     <%= f.label :name %>
@@ -15,5 +16,6 @@
   </div>
 
   <%= link_to_remove_association "Remove Character", f %>
+  <%= link_to "Delete Character", [@project, @scene, @character], method: :delete, data: {confirm: "Are you sure you want to kill this character?"} %>
 
 </div>

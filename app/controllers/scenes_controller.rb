@@ -46,6 +46,16 @@ class ScenesController < ApplicationController
 
   end
 
+  def destroy
+    @scene = Scene.find(params[:id])
+    if @project.user == current_user
+      @scene.destroy
+      redirect_to project_path(@project)
+    else
+      redirect_to project_path(@project), notice: "This isn't your project; you can't delete this scene!"
+    end
+  end
+
 private
 
   def scene_params
