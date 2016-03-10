@@ -55,12 +55,13 @@
 
   <div id="script-container">
     <h2>Script</h2>
-    <ul id="script">
-      <%= render @project.scenes %>
-    </ul>
-
-    <div id="create-script">
-      <%= render "new" %>
-    </div>
+      <ul id="script-scenes">
+        <%= render @project.scenes %>
+      </ul>
   </div>
+
+  <div id="create-script">
+    <%= render "scenes/new" %>
+  </div>
+
 </div>
