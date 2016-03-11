@@ -7,7 +7,6 @@
   mount_uploader :cover_image, ImageUploader
 
   accepts_nested_attributes_for :tags, reject_if: :all_blank
-  # accepts_nested_attributes_for :scenes, reject_if: :all_blank, allow_destroy: true
 
   validates :title, :description, presence: true
 end

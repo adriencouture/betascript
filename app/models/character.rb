@@ -1,3 +1,3 @@
 class Character < ActiveRecord::Base
-  belongs_to :scene
+  has_and_belongs_to_many :scene
 end
