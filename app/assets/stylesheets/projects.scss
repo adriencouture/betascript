@@ -4,27 +4,27 @@
 
 // HIGHLIGHT FEATURE
 
-#script-tools {
-  width: 400px;
-  height: 200px;
-  background-color: red;
-}
-
-#formatting-buttons {
-  list-style-type: none;
-}
-
-.italicYellowBg {
-  font-style: italic;
-  background-color: yellow;
-}
-
-.character {
-  font-family: Monospace;
-  text-transform: uppercase;
-  text-align:center;
-  font-size: 1em;
-}
+// #script-tools {
+//   width: 400px;
+//   height: 200px;
+//   background-color: red;
+// }
+//
+// #formatting-buttons {
+//   list-style-type: none;
+// }
+//
+// .italicYellowBg {
+//   font-style: italic;
+//   background-color: yellow;
+// }
+//
+// .character {
+//   font-family: Monospace;
+//   text-transform: uppercase;
+//   text-align:center;
+//   font-size: 1em;
+// }
 
 // PROJECT SHOW PAGE
 
@@ -186,13 +186,60 @@ a.remove_fields {
 
 // PROJECT INDEX PAGE
 
-#projects {
-  padding: 1rem;
-  // margin: 20px;
+#projects h1 {
+  padding-left: 2.5rem;
 }
 
+#projects-list {
+  @include outer-container;
+
+  & a {
+    display: block;
+  }
+}
+
+// .project-item {
+//   background-color: $basic;
+//   border: 1px solid $light-gray;
+//   width: 100%;
+//   float:left;
+//   @include outer-container;
+//   @include span-columns(12);
+//   margin-bottom: 1rem;
+//   list-style-type: none;
+//   color: $base-font-color;
+//   height: 260px;
+// }
+#projects-list a {
+  @include span-columns(6);
+  @include omega(2n);
+}
+
+
 .project-item {
-  background-color: red;
+  background-color: $basic;
+  border: 1px solid $light-gray;
+  // float:left;
+
+  margin-bottom: 1rem;
+  list-style-type: none;
+  color: $base-font-color;
+  height: 260px;
+  overflow: hidden;
+}
+
+.project-thumb-image {
+  @include span-columns(2 of 6);
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+}
+
+.project-card-info {
+  @include span-columns(4 of 6);
+  // float:left;
+  padding: 0 1rem;
+  // overflow: auto;
 }
 
 // FORM
@@ -202,28 +249,76 @@ a.remove_fields {
   margin: auto;
   margin-top: 5%;
   width: 40%;
-  background-color: $form-gray;
+  background-color: $secondary-background-color;
   border-radius: 5px;
   border: 1px solid $light-gray;
+
+  & input {
+    width: 80%;
+  }
+
+  & textarea {
+    width: 100%;
+  }
+
+  & h1 {
+    text-align: center;
+  }
 }
 
-#new_project input {
-  width: 80%;
-}
+#login-form {
+  padding: 1.5rem;
+  margin: auto;
+  width: 40%;
+  background-color: $secondary-background-color;
+  border-radius: 5px;
+  margin-top: 5%;
+  border: 1px solid $light-gray;
 
-#new_project textarea {
-  width: 100%;
-}
+  & input {
+    width: 100%;
+  }
 
-#new_project h1 {
-  text-align: center;
+  & h1 {
+    text-align: center;
+  }
 }
 
 #hero-container {
   width: 100%;
   height: 400px;
   background-color: blue;
+  margin-bottom: 1rem;
 }
+//   & p {
+//     font-size: 2em;
+//     font-family: monospace;
+//     color: $basic;
+//     text-align: center;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     width: 30em;
+//     animation: type 4s steps(60, end);
+//   }
+//
+//   & span {
+//   animation: blink 1s infinite;
+//   }
+// }
+//
+// @keyframes type{
+//   from { width: 0; }
+// }
+//
+// @keyframes type2{
+//   0%{width: 0;}
+//   50%{width: 0;}
+//   100%{ width: 100; }
+// }
+//
+// @keyframes blink{
+//   to{opacity: .0;}
+// }
 
 // USER SHOW PAGE
 

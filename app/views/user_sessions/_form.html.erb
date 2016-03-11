@@ -1,10 +1,13 @@
 <%= form_tag user_sessions_path, :method => :post do %>
+
+  <h1>Login</h1>
+
   <div class="field">
-    <%= label_tag :email %><br />
+    <%= label_tag :email %>
     <%= text_field_tag :email %>
   </div>
   <div class="field">
-    <%= label_tag :password %><br />
+    <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
 
@@ -16,5 +19,5 @@
   </div>
 <% end %>
 
-<h1>Forgot Password?</h1>
+<h3>Forgot Password?</h3>
 <%= render 'forgot_password_form' %>
