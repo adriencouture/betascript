@@ -28,13 +28,20 @@
 
 // PROJECT SHOW PAGE
 
+.background {
+  background-color: $form-gray;
+}
+
 #right-sidebar {
   float: right;
   @include clearfix;
   display: inline-block;
-  padding: 0;
+  padding: 1em;
   overflow: auto;
-  width: 30%;
+  width: 32%;
+  background-color: $basic;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
 }
 
 #script-container {
@@ -46,19 +53,39 @@
   margin-top: 0;
 }
 
+#script-container h1{
+  text-align: center;
+}
+
 #show-container {
   @include outer-container;
   padding: 4rem 2rem;
+  // background-color: yellow;
   // clear: both;
+
+  & a {
+    text-decoration: none;
+    margin-right: 1rem;
+  }
 }
 
 input#scene_heading, textarea#scene_action {
-  border: none;
+  border: 1px solid $light-gray;
   font-size: 1em;
   line-height: 1.5rem;
   width: 100%;
   // margin: 5px 0 5px 0;
-  background-color: #f8f8f8;
+  background-color: $basic;
+  border-radius: 5px;
+}
+
+.clear-me input, textarea {
+  border: 1px solid $light-gray;
+  font-size: 1em;
+  line-height: 1.5rem;
+  width: 100%;
+  // margin: 5px 0 5px 0;
+  background-color: $basic;
   border-radius: 5px;
 }
 
@@ -89,8 +116,10 @@ a.remove_fields {
 .scene {
   background-color: $basic;
   border: 1px solid $light-gray;
+  // border: none;
   margin: 5px 0;
   padding: $small-spacing;
+  border-radius: 5px;
 }
 
 // SCRIPT FORMATTING
@@ -100,14 +129,31 @@ a.remove_fields {
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
+  padding-top: 10px;
+}
+
+.character-dialogue {
+  font-family: Monospace;
+  font-size: 16px;
+  padding: 10px 100px 10px 100px;
+}
+
+.character-parenthetical {
+  font-family: Monospace;
+  font-size: 16px;
+  padding: 10px 0 20px 0;
+  text-align: center;
 }
 
 .scene-heading {
   text-transform: uppercase;
+  font-family: Monospace;
+  font-size: 20px;
 }
 
 .scene-action {
-  font-style: italic;
+  font-family: Monospace;
+  padding: 10px 0;
 }
 
 // NAVIGATION BAR
@@ -149,8 +195,9 @@ a.remove_fields {
 
 #search {
   width: 40%;
-  background-color: #f8f8f8;
+  background-color: $form-gray;
   border: none;
+  line-height: 1.4;
 }
 
 #new-project {
@@ -215,7 +262,6 @@ a.remove_fields {
   @include omega(2n);
 }
 
-
 .project-item {
   background-color: $basic;
   border: 1px solid $light-gray;
@@ -254,7 +300,7 @@ a.remove_fields {
   border: 1px solid $light-gray;
 
   & input {
-    width: 80%;
+    width: 100%;
   }
 
   & textarea {
@@ -284,41 +330,77 @@ a.remove_fields {
   }
 }
 
+#edit-scene-form {
+  padding: 1.5rem;
+  margin: auto;
+  width: 40%;
+  background-color: $secondary-background-color;
+  border-radius: 5px;
+  margin-top: 5%;
+  border: 1px solid $light-gray;
+
+  & h1 {
+    text-align: center;
+  }
+}
+
+#new-user-form {
+  padding: 1.5rem;
+  margin: auto;
+  width: 40%;
+  background-color: $secondary-background-color;
+  border-radius: 5px;
+  margin-top: 5%;
+  border: 1px solid $light-gray;
+
+  & h1 {
+    text-align: center;
+  }
+
+  & input {
+    width: 100%;
+  }
+}
+
 #hero-container {
   width: 100%;
   height: 400px;
   background-color: blue;
   margin-bottom: 1rem;
+
+  & p {
+    font-size: 1em;
+    font-family: monospace;
+    color: $basic;
+    // text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 20em;
+    animation: type 4s steps(60, end);
+  }
+
+  & p:nth-child(2){
+  animation: type2 8s steps(60, end);
+  }
+
+  & span {
+  animation: blink 1s infinite;
+  }
 }
-//   & p {
-//     font-size: 2em;
-//     font-family: monospace;
-//     color: $basic;
-//     text-align: center;
-//     white-space: nowrap;
-//     overflow: hidden;
-//     width: 30em;
-//     animation: type 4s steps(60, end);
-//   }
-//
-//   & span {
-//   animation: blink 1s infinite;
-//   }
-// }
-//
-// @keyframes type{
-//   from { width: 0; }
-// }
-//
-// @keyframes type2{
-//   0%{width: 0;}
-//   50%{width: 0;}
-//   100%{ width: 100; }
-// }
-//
-// @keyframes blink{
-//   to{opacity: .0;}
-// }
+
+@keyframes type{
+  from { width: 0; }
+}
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
 
 // USER SHOW PAGE
 
@@ -326,9 +408,6 @@ a.remove_fields {
   padding-top: 3.5rem;
 }
 
-// .action {
-//   background-color: $brand;
-//   text-decoration: none;
-//   border-radius: $base-border-radius;
-//   padding: 8px 10px;
-// }
+.action sign-up {
+  background-color: $brand;
+}

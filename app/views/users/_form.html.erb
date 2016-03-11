@@ -1,0 +1,47 @@
+<div id="new-user-form">
+  <%= form_for(@user) do |f| %>
+
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h3>Form is invalid</h3>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h1>Sign up</h1>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: "Email" %>
+  </div>
+  <br><br>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="action sign-up">
+    <%= f.submit "Sign me up!" %>
+  </div>
+
+  <% end %>
+</div>

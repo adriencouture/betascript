@@ -1,16 +1,16 @@
 <% if @project.user == current_user %>
-  <div id="scene-form">
-    <h3>Edit Scene</h3>
+  <div id="edit-scene-form">
+    <h1>Edit Scene</h1>
 
     <%= form_for [@project, @scene] do |f| %>
 
       <div class="field">
-        <%= f.label :heading %><br>
+        <%= f.label :heading %>
         <%= f.text_field :heading, :placeholder => "Scene heading" %>
       </div>
 
       <div class="field">
-        <%= f.label :action %><br>
+        <%= f.label :action %>
         <%= f.text_area :action, :placeholder => "Action" %>
       </div>
 
