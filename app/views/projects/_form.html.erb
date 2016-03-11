@@ -11,32 +11,33 @@
   </div>
   <% end %>
 
+  <h1>Get Started</h1>
+
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: "Title" %>
   </div>
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, placeholder: "Description" %>
   </div>
 
   <div class="field">
     <%= f.label :genre %>
-    <%= f.text_field :genre %>
+    <%= f.text_field :genre, placeholder: "Genre" %>
   </div>
 
   <div class="field">
     <%= f.label :cover_image %>
     <%= image_tag(@project.cover_image.url(:show)) if @project.cover_image? %>
     <%= f.file_field :cover_image %>
-    <%= f.hidden_field :cover_image_cache %>
-    Remove Image
-    <%= f.check_box :remove_cover_image %>
+    <%= f.hidden_field :cover_image_cache %><br>
+    Remove Image <%= f.check_box :remove_cover_image %>
   </div>
 
 
-  <h2>Tags</h2>
+  <h3>Tags</h3>
 
   <%= f.fields_for :tags, Tag.new do |tag_field| %>
   <div class="field">

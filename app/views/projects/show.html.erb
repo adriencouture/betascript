@@ -1,5 +1,5 @@
 <div id="show-container">
-  <div id="left-sidebar">
+  <div id="right-sidebar">
     <div id="project-header">
       <%= image_tag @project.cover_image.url(:show) %>
       <h2>
@@ -54,14 +54,14 @@
   </div>
 
   <div id="script-container">
-    <h2>Script</h2>
+    <h1>Script</h1>
       <ul id="script-scenes">
         <%= render @project.scenes %>
       </ul>
-  </div>
 
-  <div id="create-script">
-    <%= render "scenes/new" %>
-  </div>
 
+    <div id="create-script">
+      <%= render "scenes/new" %>
+    </div>
+  </div>
 </div>

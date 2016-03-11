@@ -5,12 +5,12 @@
     <%= form_for [@project, @scene], remote: true do |f| %>
 
       <div class="field">
-        <%= f.label :heading %><br>
+        <%= f.label :heading %>
         <%= f.text_field :heading, :placeholder => "Scene heading" %>
       </div>
 
       <div class="field">
-        <%= f.label :action %><br>
+        <%= f.label :action %>
         <%= f.text_area :action, :placeholder => "Action" %>
       </div>
 
@@ -20,7 +20,7 @@
         <% end %>
 
         <div class="links">
-          <%= link_to_add_association 'add character', f, :characters, {partial: 'projects/character_fields'} %>
+          <%= link_to_add_association 'Add Character', f, :characters, {partial: 'projects/character_fields'} %>
         </div>
       </div>
 

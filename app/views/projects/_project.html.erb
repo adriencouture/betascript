@@ -1,9 +1,16 @@
-<li class="project-item">
-  <%= link_to project_path(project.id) do %>
-    <h3>
-      <%= project.title %>
-    </h3>
-    <%= image_tag project.cover_image.url(:thumb) %>
-  <% end %>
-  <p><%= truncate(project.description, length: 140) %></p>
-</li>
+<%= link_to project_path(project.id) do %>
+  <li class="project-item">
+    <div class="project-thumb-image">
+      <%= image_tag project.cover_image.url(:thumb) %>
+    </div>
+
+    <div class="project-card-info">
+      <h3>
+        <%= project.title %>
+      </h3>
+
+      <p><%= truncate(project.description, length: 140) %></p>
+
+    </div>
+  </li>
+<% end %>

@@ -2,62 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#script-tools {
-  width: 400px;
-  height: 200px;
-  background-color: red;
-}
+// HIGHLIGHT FEATURE
 
-#formatting-buttons {
-  list-style-type: none;
-}
+// #script-tools {
+//   width: 400px;
+//   height: 200px;
+//   background-color: red;
+// }
+//
+// #formatting-buttons {
+//   list-style-type: none;
+// }
+//
+// .italicYellowBg {
+//   font-style: italic;
+//   background-color: yellow;
+// }
+//
+// .character {
+//   font-family: Monospace;
+//   text-transform: uppercase;
+//   text-align:center;
+//   font-size: 1em;
+// }
 
-.italicYellowBg {
-  font-style: italic;
-  background-color: yellow;
-}
+// PROJECT SHOW PAGE
 
-.character {
-  font-family: Monospace;
-  text-transform: uppercase;
-  text-align:center;
-  font-size: 1em;
-}
-
-#left-sidebar {
-  // float: left;
+#right-sidebar {
+  float: right;
+  @include clearfix;
   display: inline-block;
-  padding: 0px 30px 0 0;
+  padding: 0;
+  overflow: auto;
+  width: 30%;
 }
 
 #script-container {
   float: left;
-  width: 60%;
+  width: 65%;
 }
 
 #script-container h2{
   margin-top: 0;
 }
 
-.scene-heading {
-  text-transform: uppercase;
-}
-
-.scene-action {
-  font-style: italic;
-}
-
-.character-name {
-  font-family: Monospace;
-  text-transform: uppercase;
-  font-size: 20px;
-  text-align: center;
-}
-
 #show-container {
-  padding-top: 40px;
+  @include outer-container;
+  padding: 4rem 2rem;
   // clear: both;
-  // overflow: auto;
 }
 
 input#scene_heading, textarea#scene_action {
@@ -72,7 +64,7 @@ input#scene_heading, textarea#scene_action {
 
 a.add_fields {
   display:block;
-  background-color: #71D6E3;
+  background-color: $brand;
   padding: 10px;
   width: 200px;
   text-align: center;
@@ -81,6 +73,44 @@ a.add_fields {
   text-decoration: none;
   margin: 0 0 5px 0;
 }
+
+a.remove_fields {
+  display:block;
+  background-color: $dark-gray;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 0 5px 0;
+}
+
+.scene {
+  background-color: $basic;
+  border: 1px solid $light-gray;
+  margin: 5px 0;
+  padding: $small-spacing;
+}
+
+// SCRIPT FORMATTING
+
+.character-name {
+  font-family: Monospace;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
+
+.scene-heading {
+  text-transform: uppercase;
+}
+
+.scene-action {
+  font-style: italic;
+}
+
+// NAVIGATION BAR
 
 .navbar {
   position: fixed;
@@ -120,21 +150,11 @@ a.add_fields {
 #search {
   width: 40%;
   background-color: #f8f8f8;
+  border: none;
 }
 
 #new-project {
   float:left;
-}
-
-#comment-name {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: $turquoise;
-}
-
-#comment-time {
-  font-size: 0.9rem;
-  color: $medium-gray;
 }
 
 #new-project-button {
@@ -147,20 +167,168 @@ a.add_fields {
   color: $basic;
 }
 
-#projects {
-  padding: 1rem;
-  margin: 20px;
+// COMMENTS
+
+#comment-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: $brand;
 }
+
+#comment-time {
+  font-size: 0.9rem;
+  color: $medium-gray;
+}
+
+#comment_comment {
+  width: 100%;
+}
+
+// PROJECT INDEX PAGE
+
+#projects h1 {
+  padding-left: 2.5rem;
+}
+
+#projects-list {
+  @include outer-container;
+
+  & a {
+    display: block;
+  }
+}
+
+// .project-item {
+//   background-color: $basic;
+//   border: 1px solid $light-gray;
+//   width: 100%;
+//   float:left;
+//   @include outer-container;
+//   @include span-columns(12);
+//   margin-bottom: 1rem;
+//   list-style-type: none;
+//   color: $base-font-color;
+//   height: 260px;
+// }
+#projects-list a {
+  @include span-columns(6);
+  @include omega(2n);
+}
+
 
 .project-item {
-  background-color: red;
+  background-color: $basic;
+  border: 1px solid $light-gray;
+  // float:left;
+
+  margin-bottom: 1rem;
+  list-style-type: none;
+  color: $base-font-color;
+  height: 260px;
+  overflow: hidden;
 }
 
+.project-thumb-image {
+  @include span-columns(2 of 6);
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+}
+
+.project-card-info {
+  @include span-columns(4 of 6);
+  // float:left;
+  padding: 0 1rem;
+  // overflow: auto;
+}
+
+// FORM
+
 #new_project {
-  padding: 1rem;
+  padding: 1.5rem;
   margin: auto;
   margin-top: 5%;
   width: 40%;
-  background-color: $light-gray;
-  border-radius: 10px;
+  background-color: $secondary-background-color;
+  border-radius: 5px;
+  border: 1px solid $light-gray;
+
+  & input {
+    width: 80%;
+  }
+
+  & textarea {
+    width: 100%;
+  }
+
+  & h1 {
+    text-align: center;
+  }
 }
+
+#login-form {
+  padding: 1.5rem;
+  margin: auto;
+  width: 40%;
+  background-color: $secondary-background-color;
+  border-radius: 5px;
+  margin-top: 5%;
+  border: 1px solid $light-gray;
+
+  & input {
+    width: 100%;
+  }
+
+  & h1 {
+    text-align: center;
+  }
+}
+
+#hero-container {
+  width: 100%;
+  height: 400px;
+  background-color: blue;
+  margin-bottom: 1rem;
+}
+//   & p {
+//     font-size: 2em;
+//     font-family: monospace;
+//     color: $basic;
+//     text-align: center;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     width: 30em;
+//     animation: type 4s steps(60, end);
+//   }
+//
+//   & span {
+//   animation: blink 1s infinite;
+//   }
+// }
+//
+// @keyframes type{
+//   from { width: 0; }
+// }
+//
+// @keyframes type2{
+//   0%{width: 0;}
+//   50%{width: 0;}
+//   100%{ width: 100; }
+// }
+//
+// @keyframes blink{
+//   to{opacity: .0;}
+// }
+
+// USER SHOW PAGE
+
+#user-show {
+  padding-top: 3.5rem;
+}
+
+// .action {
+//   background-color: $brand;
+//   text-decoration: none;
+//   border-radius: $base-border-radius;
+//   padding: 8px 10px;
+// }
