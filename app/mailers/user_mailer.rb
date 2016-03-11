@@ -4,7 +4,8 @@ class UserMailer < ApplicationMailer
 
   def welcome_email(user)
     @user = user
-    @url = 'http://betascript.co/login'
+    # We will change this when we wire betascript.co
+    @url = 'https://evening-everglades-94248.herokuapp.com/login'
     mail(to: @user.email, subject: 'Welcome to BetaScript!')
   end
 
