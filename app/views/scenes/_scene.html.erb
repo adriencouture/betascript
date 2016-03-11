@@ -7,15 +7,25 @@
   </div>
 
     <% scene.characters.each  do |char| %>
-      <div class="character-name">
-        <%= char.name %>
-      </div>
-      <div class="character-parenthetical">
-        <%= char.parenthetical %>
-      </div>
-      <div class="character-dialogue">
-        <%= char.dialogue %>
-      </div>
+
+      <% if char.name.present? %>
+        <div class="character-name">
+          <%= char.name %>
+        </div>
+      <% end %>
+
+      <% if char.parenthetical.present? %>
+        <div class="character-parenthetical">
+          (<%= char.parenthetical %>)
+        </div>
+      <% end %>
+
+      <% if char.dialogue.present? %>
+        <div class="character-dialogue">
+          <%= char.dialogue %>
+        </div>
+      <% end %>
+
     <% end %>
 
     <% if @project.user == current_user %>
