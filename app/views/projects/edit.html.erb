@@ -1,9 +1,7 @@
 <% if @project.user == current_user %>
 
   <h1>Edit project</h1>
-    <%= render 'form' %>
-    <%= link_to "Delete Project", @project, method: :delete, data: {confirm: "Are you sure you want to delete this project?"} %>
-
+    <%= render 'edit_project' %>
 <% else %>
   <h3>Nothing to see here... Check out our main <%= link_to "Projects", root_path %> page!</h3>
 <% end %>

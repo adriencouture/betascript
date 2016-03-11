@@ -1,0 +1,56 @@
+<%= form_for @project do |f| %>
+  <div id="edit-project-form">
+    <% if @project.errors.any? %>
+    <div id="error-explanation">
+      <h3><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h3>
+      <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <h1>Edit Project</h1>
+
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: "Title" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description, placeholder: "Description" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :genre %>
+      <%= f.text_field :genre, placeholder: "Genre" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :cover_image %>
+      <%= image_tag(@project.cover_image.url(:show)) if @project.cover_image? %>
+      <%= f.file_field :cover_image %>
+      <%= f.hidden_field :cover_image_cache %><br>
+      Remove Image <%= f.check_box :remove_cover_image %>
+    </div>
+
+
+    <h3>Tags</h3>
+
+    <%= f.fields_for :tags, Tag.new do |tag_field| %>
+    <div class="field">
+      <%= tag_field.text_field :title, :placeholder => "Separate tags with spaces" %>
+    </div>
+    <% end %>
+
+    <div class="action">
+      <%= f.submit "Create Project" %>
+    </div>
+
+    <div class="delete-btn">
+      <%= link_to "Delete Project", @project, method: :delete, data: {confirm: "Are you sure you want to delete this project?"} %>
+    </div>
+  </div>
+<% end %>

@@ -5,21 +5,22 @@
     </div>
   <% end %>
 </div>
+<div class="background">
+  <div id="hero-container">
+    <p>SCENE-HEADING</p>
+    <!-- <p>Scene-action</p>
+    <p>CHARACTER</p><br> -->
+    <p>Dialogue<span>|</span></p>
+  </div>
 
-<div id="hero-container">
-  <p>SCENE-HEADING</p>
-  <!-- <p>Scene-action</p>
-  <p>CHARACTER</p><br> -->
-  <p>Dialogue<span>|</span></p>
+  <div id="projects">
+    <h1>Projects</h1>
+      <ul id="projects-list">
+        <%= render @projects %>
+      </ul>
+
+      <%= link_to 'All projects', projects_path, id: "all-projects-link" %>
+
+  </div>
+
 </div>
-
-<div id="projects">
-  <h1>Projects</h1>
-    <ul id="projects-list">
-      <%= render @projects %>
-    </ul>
-
-
-</div>
-
-<%= link_to 'All projects', projects_path %>
