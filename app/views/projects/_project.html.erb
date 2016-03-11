@@ -10,6 +10,12 @@
       </h3>
 
       <p><%= truncate(project.description, length: 140) %></p>
+      <p>
+        <strong>Tags:</strong>
+        <% project.tags.each do |t| %>
+        <%= t.title %>
+        <% end %>
+      </p>
 
     </div>
   </li>
