@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require cocoon
 //= require turbolinks
+//= require typed
 //= require rangy-core
 //= require rangy-classapplier
 //= require rangy-highlighter

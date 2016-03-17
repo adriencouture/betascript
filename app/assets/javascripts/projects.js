@@ -3,7 +3,6 @@
 
 $(document).on('ready page:load', function() {
 
-
   $('#search-form').on('submit', function(event){
     event.preventDefault();
 
@@ -16,7 +15,13 @@ $(document).on('ready page:load', function() {
     });
   });
 
-
+  $(function(){
+        $(".typed-script").typed({
+            strings: ["EXT. U.S. EMBASSY (TEHRAN) - MORNING<br><br>Effigies of Jimmy Carter and the deposed Shah -- crowds chanting 'Magbar Carter! Magbar Ahmrika!' Fists in the air.<br><br>SUPERIMPOSE: TEHRAN - NOVEMBER 4, 1979<br><br>YOUNG MEN AND WOMEN -- about 2/3 men and 1/3 women, some with flak jackets; about half the young women wear full chador. Many wear plastic bibs with photographs of Ayatollah Khomeini."],
+            typeSpeed: 10,
+            cursorChar: "|"
+        });
+    });
   // function gEBI(id) {
   //   return document.getElementById(id);
   // }

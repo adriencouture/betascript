@@ -36,6 +36,8 @@ gem 'mini_magick'
 # Cloud-based service that provides an end-to-end image management solution including uploads, storage, manipulations, optimizations and delivery.
 gem 'cloudinary'
 
+gem 'typedJS'
+
 gem 'bourbon'
 gem 'neat'
 gem 'autoprefixer-rails'

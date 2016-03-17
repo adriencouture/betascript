@@ -394,13 +394,38 @@ a.remove_fields {
 #hero-container {
   width: 100%;
   height: 400px;
-  background-color: #000;
+  background-color: blue;
   margin-bottom: 1rem;
 }
 
-// #animated-text {
-//   padding: 3rem;
-//
+.animated-text {
+   padding: 3rem;
+   font-size: 1.2em;
+   font-family: monospace;
+   color: $basic;
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    color: #fff;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 //   & p {
 //     font-size: 1.2em;
 //     font-family: monospace;
