@@ -148,6 +148,11 @@ input[type="submit"] {
   padding: 1rem 0 1rem 0;
 }
 
+#create-btn input {
+  width: 100%;
+  clear: both;
+}
+
 // Script Formatting
 
 .scene-heading {
@@ -223,7 +228,7 @@ a.add_fields {
   color: #fff;
   background-color: $blue;
   text-align: center;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
   border-radius: $base-border-radius;
   padding: $small-spacing $base-spacing;
   border: 0;
@@ -235,7 +240,7 @@ a.remove_fields {
   color: #fff;
   background-color: $dark-gray;
   text-align: center;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 0.5rem 0.5rem 0 0;
   border-radius: $base-border-radius;
   padding: $small-spacing $base-spacing;
   border: 0;
@@ -243,4 +248,5 @@ a.remove_fields {
 
 .nested-fields {
   clear: both;
+  padding-top: 1rem;
 }

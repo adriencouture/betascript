@@ -56,9 +56,9 @@
 
 #search-feature {
   padding-top: 5rem;
-  background-color: #000;
+  background-color: $basic;
   width: 100%;
-  // border-bottom: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
 }
 
 #search-input {
@@ -68,7 +68,7 @@
 
 #search {
   width: 80%;
-  background-color: $form-gray;
+  // background-color: $form-gray;
   border: 1px solid $light-gray;
   line-height: 1.4;
 }
