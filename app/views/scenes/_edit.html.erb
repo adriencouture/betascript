@@ -20,14 +20,16 @@
         <% end %>
 
         <div class="links">
-          <%= link_to_add_association 'add character', f, :characters, {partial: 'projects/edit_character_fields'} %>
+          <%= link_to_add_association 'Add Character', f, :characters, {partial: 'projects/edit_character_fields'} %>
         </div>
       </div>
 
-      <div class="action">
-        <%= f.submit "Edit Scene" %>
-        <%= link_to "Delete Scene", [@project, @scene], method: :delete, data: {confirm: "Are you sure you want to delete this scene?"} %>
+      <div class="action" id="edit-btn">
+        <%= f.submit "Confirm" %>
+      </div>
 
+      <div class="delete-btn">
+        <%= link_to "Delete Scene", [@project, @scene], method: :delete, data: {confirm: "Are you sure you want to delete this scene?"} %>
       </div>
 
     <% end %>

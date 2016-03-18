@@ -1,0 +1,74 @@
+.navbar {
+  position: fixed;
+  background-color: $basic;
+  height: 5rem;
+  width: 100%;
+  z-index: 2;
+  // padding: 1.2rem 1rem;
+  border-bottom: 1px solid $light-gray;
+}
+
+.navbar-navigation-left {
+  // float:left;
+  padding-top: 0.4rem;
+  text-align: center;
+  width: 100%;
+
+  a {
+  color: #000;
+  text-decoration: none;
+  }
+}
+
+.navbar-navigation-right {
+  padding: 0.8rem 1rem 1.2rem 1rem;
+  float:right;
+
+  li {
+  display: inline;
+  padding-left: 1rem;
+  }
+
+  a {
+  color: $medium-gray;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+  }
+}
+
+// .navbar-navigation-left a {
+//   color: $brand;
+//   color: $medium-gray;
+// }
+
+.logo-nav {
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+// Search Bar::Project Index Page
+
+#search-feature {
+  padding-top: 5rem;
+  background-color: #000;
+  width: 100%;
+  // border-bottom: 1px solid $light-gray;
+}
+
+#search-input {
+  text-align: center;
+  margin: 8px 0 0 0;
+}
+
+#search {
+  width: 80%;
+  background-color: $form-gray;
+  border: 1px solid $light-gray;
+  line-height: 1.4;
+}

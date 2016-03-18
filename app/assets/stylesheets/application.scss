@@ -1,17 +1,9 @@
-//= require blink
-
-@import 'normalize';
+// //= require blink
 //
+@import 'normalize';
 @import 'bourbon';
-// @import 'base/grid-settings';
 @import 'base/base';
 @import 'neat';
-
-html {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  margin: 0px;
-  font-size: 16px;
-  padding: 0px;
-}
-
+// @import 'projects';
+@import 'navigation';
 @import 'projects';

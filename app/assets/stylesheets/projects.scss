@@ -1,318 +1,43 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-// HIGHLIGHT FEATURE
-
-// #script-tools {
-//   width: 400px;
-//   height: 200px;
-//   background-color: red;
-// }
-//
-// #formatting-buttons {
-//   list-style-type: none;
-// }
-//
-// .italicYellowBg {
-//   font-style: italic;
-//   background-color: yellow;
-// }
-//
-// .character {
-//   font-family: Monospace;
-//   text-transform: uppercase;
-//   text-align:center;
-//   font-size: 1em;
-// }
-
-// PROJECT SHOW PAGE
-
-.background {
-  background-color: $form-gray;
-  padding-bottom: 100%;
-}
-
-#right-sidebar {
-  float: right;
-  @include clearfix;
-  display: inline-block;
-  padding: 1em;
-  overflow: auto;
-  width: 32%;
-  background-color: $basic;
-  border: 1px solid $light-gray;
-  border-radius: 5px;
-}
-
-#script-container {
-  float: left;
-  width: 65%;
-}
-
-#script-container h2{
-  margin-top: 0;
-}
-
-#script-container h1{
-  text-align: center;
-}
-
-#show-container {
-  @include outer-container;
-  padding: 4rem 2rem;
-  // background-color: yellow;
-  // clear: both;
-
-  & a {
-    text-decoration: none;
-    // margin-right: 1rem;
-  }
-}
-
-input#scene_heading, textarea#scene_action {
-  border: 1px solid $light-gray;
-  font-size: 1em;
-  line-height: 1.5rem;
-  width: 100%;
-  // margin: 5px 0 5px 0;
-  background-color: $basic;
-  border-radius: 5px;
-}
-
-.clear-me input, textarea {
-  border: 1px solid $light-gray;
-  font-size: 1em;
-  line-height: 1.5rem;
-  width: 100%;
-  // margin: 5px 0 5px 0;
-  background-color: $basic;
-  border-radius: 5px;
-}
-
-a.add_fields {
-  display:block;
-  background-color: $brand;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
-  border-radius: 5px;
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 0 5px 0;
-}
-
-a.remove_fields {
-  display:block;
-  background-color: $dark-gray;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
-  border-radius: 5px;
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 0 5px 0;
-}
-
-.scene {
-  background-color: $basic;
-  border: 1px solid $light-gray;
-  // border: none;
-  margin: 5px 0;
-  padding: $small-spacing;
-  border-radius: 5px;
-}
-
-// SCRIPT FORMATTING
-
-.character-name {
-  font-family: Monospace;
-  text-transform: uppercase;
-  font-size: 20px;
-  text-align: center;
-  padding-top: 10px;
-}
-
-.character-dialogue {
-  font-family: Monospace;
-  font-size: 16px;
-  padding: 10px 100px 10px 100px;
-}
-
-.character-parenthetical {
-  font-family: Monospace;
-  font-size: 16px;
-  padding: 10px 0 20px 0;
-  text-align: center;
-}
-
-.scene-heading {
-  text-transform: uppercase;
-  font-family: Monospace;
-  font-size: 20px;
-}
-
-.scene-action {
-  font-family: Monospace;
-  padding: 10px 0;
-}
-
-// NAVIGATION BAR
-
-.navbar {
-  position: fixed;
-  background-color: $basic;
-  height: 3.5rem;
-  width: 100%;
-  z-index: 2;
-  padding: 1.2rem 1rem;
-  border-bottom: 1px solid $light-gray;
-}
-
-.navbar-navigation-left {
-  float:left;
-}
-
-.navbar-navigation-right {
-  float:right;
-}
-
-.navbar-navigation-right li {
-  display: inline;
-  padding-left: 1rem;
-}
-
-#logo-nav {
-  // font-size: 18px;
-}
-
-#search-feature {
-  padding-top: 3.5rem;
-  background-color: white;
-  width: 100%;
-  border-bottom: 1px solid $light-gray;
-}
-
-#search-input {
-  text-align: center;
-  margin: 8px 0 0 0;
-}
-
-#search {
-  width: 40%;
-  background-color: $form-gray;
-  border: 1px solid $light-gray;
-  line-height: 1.4;
-}
-
-#new-project {
-  float:left;
-}
-
-#new-project-button {
-  background-color: $brand;
-  padding: 8px 35px;
-  border-radius: 5px;
-}
-
-#new-project-button a {
-  color: $basic;
-}
-
-// COMMENTS
-
-#comment-name {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: $brand;
-}
-
-#comment-time {
-  font-size: 0.9rem;
-  color: $medium-gray;
-}
-
-#comment_comment {
-  width: 100%;
-}
-
-// PROJECT INDEX PAGE
-
-#projects h1 {
-  padding-left: 2.5rem;
-}
-
-#all-projects-link {
-  margin-left: 2.5rem;
-  top: 10px;
-  text-decoration: none;
-  color: $basic;
-  padding:8px 35px;
-  border-radius: 5px;
-  background-color: $dark-gray;
-}
-
 #projects-list {
   @include outer-container;
 
-  & a {
-    display: block;
+  a {
+    @include span-columns(12);
+    margin-bottom: 1rem;
   }
-}
-
-// .project-item {
-//   background-color: $basic;
-//   border: 1px solid $light-gray;
-//   width: 100%;
-//   float:left;
-//   @include outer-container;
-//   @include span-columns(12);
-//   margin-bottom: 1rem;
-//   list-style-type: none;
-//   color: $base-font-color;
-//   height: 260px;
-// }
-#projects-list a {
-  @include span-columns(6);
-  @include omega(2n);
 }
 
 .project-item {
   background-color: $basic;
-  border: 1px solid $light-gray;
-  // float:left;
-
-  margin-bottom: 1rem;
-  list-style-type: none;
-  color: $base-font-color;
-  height: 260px;
+  height: 185px;
   overflow: hidden;
 }
 
+#projects {
+  width: 100%;
+  padding: 1rem 0.8rem 3rem 0.8rem;
+  background-color: $basic;
+}
+
 .project-thumb-image {
-  @include span-columns(2 of 6);
-  margin: 0;
-  padding: 0;
-  // overflow: hidden;
+  @include span-columns(4 of 12);
 }
 
 .project-card-info {
-  @include span-columns(4 of 6);
-  // float:left;
-  padding: 0 1rem;
-  // overflow: auto;
+  @include span-columns(8 of 12);
+  color: $dark-gray;
+
+  h3 {
+    color: #000;
+  }
 }
 
-// FORM
+// Forms::New Project & Edit Project
 
 #new_project, #edit-project-form {
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
   margin: auto;
-  margin-top: 5%;
-  width: 40%;
-  background-color: $secondary-background-color;
-  border-radius: 5px;
-  border: 1px solid $light-gray;
+  background-color: $basic;
 
   & input {
     width: 100%;
@@ -321,19 +46,170 @@ a.remove_fields {
   & textarea {
     width: 100%;
   }
+}
 
-  & h1 {
-    text-align: center;
+// Forms::Sign Up & Login
+
+#login-form, #new-user-form {
+  padding: 3rem 1.5rem;
+  margin: auto;
+  background-color: $basic;
+
+  & input {
+    width: 100%;
   }
+
+  & textarea {
+    width: 100%;
+  }
+}
+
+#remember label {
+  width: 50px;
+  height: 50px;
+}
+
+// Buttons
+
+#{$all-buttons} {
+  appearance: none;
+  color: $basic;
+  background-color: $medium-gray;
+  text-decoration: none;
+  border-radius: $base-border-radius;
+  padding: $small-spacing $base-spacing;
+  border: 0;
+}
+
+input[type="submit"] {
+  background-color: $green;
+}
+
+.field .blue-btn {
+  background-color: $blue;
+}
+
+#show-container {
+  @include outer-container;
+}
+
+// Show Page::Project & Script Show
+
+#right-sidebar {
+  @include span-columns(12);
+  padding: 6rem 0.8rem 1rem 0.8rem;
+  margin: auto;
+  background-color: $basic;
+}
+
+#script-container {
+  @include span-columns(12);
+  padding: 1rem 0.8rem 3rem 0.8rem;
+  margin: auto;
+  background-color: $basic;
+  margin-top: 1rem;
+}
+
+#comments {
+  @include span-columns(12);
+  padding: 1rem 0.8rem 3rem 0.8rem;
+  margin: auto;
+  background-color: $basic;
+  margin-top: 1rem;
+  color: $dark-gray;
+
+  textarea {
+    width: 100%;
+  }
+}
+
+#comment-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: $blue;
+}
+
+#comment-time {
+  font-size: 0.9rem;
+  color: $medium-gray;
+}
+
+// Forms::Script & Character
+
+#scene_heading, #scene_action {
+  width: 100%;
+}
+
+.clear-me input, textarea {
+  width: 100%;
+}
+
+.scene {
+  padding: 1rem 0 1rem 0;
+}
+
+// Script Formatting
+
+.scene-heading {
+  font-family: Monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.scene-action {
+  font-family: Monospace;
+  padding: 0.5rem 0;
+}
+
+.character-name {
+  font-family: Monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.character-dialogue {
+  font-family: Monospace;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.character-parenthetical {
+  font-family: Monospace;
+  padding: 0.5rem 0 0rem 0;
+  text-align: center;
+}
+
+#edit-scene {
+  padding-top: 0.8rem;
+  text-align: right;
+
+  a {
+    text-decoration: none;
+    color: $medium-gray;
+  }
+}
+
+// Forms::Edit Scene
+
+#edit-scene-form {
+  padding: 3rem 0.8rem;
+  margin: auto;
+  background-color: $basic;
+}
+
+#edit-btn input {
+  width: 100%;
 }
 
 .delete-btn {
   background-color: #DD4B39;
   width: 100%;
   text-align: center;
-  padding: 8px;
-  border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 0.5rem;
+  border-radius: $base-border-radius;
+  padding: $small-spacing $base-spacing;
+  border: 0;
 
   & a {
     text-decoration: none;
@@ -341,162 +217,30 @@ a.remove_fields {
   }
 }
 
-#login-form {
-  padding: 1.5rem;
-  margin: auto;
-  width: 40%;
-  background-color: $secondary-background-color;
-  border-radius: 5px;
-  margin-top: 5%;
-  border: 1px solid $light-gray;
-
-  & input {
-    width: 100%;
-  }
-
-  & h1 {
-    text-align: center;
-  }
+a.add_fields {
+  float: left;
+  text-decoration: none;
+  color: #fff;
+  background-color: $blue;
+  text-align: center;
+  margin-top: 0.5rem;
+  border-radius: $base-border-radius;
+  padding: $small-spacing $base-spacing;
+  border: 0;
 }
 
-#edit-scene-form {
-  padding: 1.5rem;
-  margin: auto;
-  width: 40%;
-  background-color: $secondary-background-color;
-  border-radius: 5px;
-  margin-top: 5%;
-  border: 1px solid $light-gray;
-
-  & h1 {
-    text-align: center;
-  }
+a.remove_fields {
+  float: left;
+  text-decoration: none;
+  color: #fff;
+  background-color: $dark-gray;
+  text-align: center;
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  border-radius: $base-border-radius;
+  padding: $small-spacing $base-spacing;
+  border: 0;
 }
 
-#new-user-form {
-  padding: 1.5rem;
-  margin: auto;
-  width: 40%;
-  background-color: $secondary-background-color;
-  border-radius: 5px;
-  margin-top: 5%;
-  border: 1px solid $light-gray;
-
-  & h1 {
-    text-align: center;
-  }
-
-  & input {
-    width: 100%;
-  }
-}
-
-#hero-container {
-  width: 100%;
-  height: 400px;
-  background-color: blue;
-  margin-bottom: 1rem;
-}
-
-.animated-text {
-   padding: 3rem;
-   font-size: 1.2em;
-   font-family: monospace;
-   color: $basic;
-}
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-    color: #fff;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-//   & p {
-//     font-size: 1.2em;
-//     font-family: monospace;
-//     color: $basic;
-//     // text-align: center;
-//     white-space: nowrap;
-//     overflow: hidden;
-//     width: 60em;
-//     animation: type 4s steps(50, end);
-//   }
-//
-//   & p:nth-child(2){
-//   animation: type2 4s steps(40, end);
-//   // animation-fill-mode: forwards;
-//   }
-//
-//   & p:nth-child(3){
-//   animation: type3 8s steps(50, end);
-//   }
-//
-//   & p:nth-child(4){
-//   animation: type4 9s steps(50, end);
-//   }
-//
-//   & p:nth-child(5){
-//   animation: type5 19s steps(50, end);
-//   }
-//
-//   & span {
-//   animation: blink 1s infinite;
-//   }
-// }
-//
-// @keyframes type{
-//   from { width: 0; }
-// }
-//
-// @keyframes type2{
-//   0%{width: 0;}
-//   50%{width: 0;}
-//   100%{ width: 100; }
-// }
-//
-// @keyframes type3{
-//   0%{width: 0;}
-//   50%{width: 0;}
-//   100%{ width: 100; }
-// }
-//
-// @keyframes type4{
-//   0%{width: 0;}
-//   50%{width: 0;}
-//   100%{ width: 100; }
-// }
-//
-// @keyframes type5{
-//   0%{width: 0;}
-//   50%{width: 0;}
-//   100%{ width: 100; }
-// }
-//
-// @keyframes blink{
-//   to{opacity: .0;}
-// }
-
-// USER SHOW PAGE
-
-#user-show {
-  padding-top: 3.5rem;
-}
-
-.action sign-up {
-  background-color: $brand;
+.nested-fields {
+  clear: both;
 }

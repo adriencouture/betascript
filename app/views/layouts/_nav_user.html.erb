@@ -1,7 +1,7 @@
 <div class="navbar">
-  <ul class="navbar-navigation-left">
-    <li><%= link_to "BetaScript", projects_path, id: "logo-nav" %></li>
-  </ul>
+  <div class="navbar-navigation-left">
+    <%= link_to "BetaScript", projects_path, class: "logo-nav" %>
+  </div>
   <ul class="navbar-navigation-right">
     <li id="new-project-button"><%= link_to 'New Project', new_project_path %></li>
     <li><%= link_to "#{current_user.first_name}'s profile", user_path(current_user.id) %></li>
