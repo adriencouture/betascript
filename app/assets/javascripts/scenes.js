@@ -23,12 +23,20 @@ $(document).on('ready page:load', function() {
 
   $('a.add_fields').on('click', addCharacterScroll);
 
-  var removeCharacterScroll = function() {
+  // No need to include this as removing character reduces the size of the document
+  // var removeCharacterScroll = function() {
+  //   var currentHeight = $(window).scrollTop();
+  //   $('html, body').animate({ scrollTop: currentHeight - 300 }, 2000);
+  // }
+  //
+  // $('a.remove_fields.dynamic').on('click', removeCharacterScroll);
+
+  // function to make 'create scene' scroll up:
+  var createSceneScroll = function() {
     var currentHeight = $(window).scrollTop();
-    $('html, body').animate({ scrollTop: currentHeight - 300 }, 2000);
+    $('html, body').animate({ scrollTop: currentHeight - 190 }, 500);
   }
 
-  $('a.remove_fields.dynamic').on('click', removeCharacterScroll);
-
+  $('div#create-btn input').on('click', createSceneScroll);
 
 });
