@@ -2,8 +2,12 @@
 // $visual-grid-color: yellow;
 
 // Breakpoints
-$medium-screen: 600px;
-$large-screen: 900px;
+$small-screen: 375px;
+$large-screen: 550px;
+
+$small-screen-only: new-breakpoint(min-width $small-screen max-width ($large-screen - 1px));
+$large-screen-up: new-breakpoint(min-width $large-screen);
+
 
 // Typography
 $base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

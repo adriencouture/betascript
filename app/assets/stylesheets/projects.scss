@@ -1,16 +1,33 @@
 #projects-list {
   @include outer-container;
+}
 
-  a {
-    @include span-columns(12);
+#projects-list a {
+  @include media(max-width 549px) {
+  @include span-columns(12);
+  margin-bottom: 1rem;
+}
+  @include media(min-width 550px) {
+    @include span-columns(6);
+    @include omega(2n);
     margin-bottom: 1rem;
   }
 }
 
 .project-item {
-  background-color: $basic;
-  height: 185px;
-  overflow: hidden;
+  @include media(max-width 549px) {
+    background-color: $basic;
+    height: 185px;
+    overflow: hidden;
+  }
+
+  @include media(min-width 550px) {
+    background-color: $basic;
+    border: 1px solid $light-gray;
+    border-radius: $base-border-radius;
+    height: 185px;
+    overflow: hidden;
+  }
 }
 
 #projects {
@@ -20,15 +37,27 @@
 }
 
 .project-thumb-image {
-  @include span-columns(4 of 12);
+  @include media(max-width 549px) {
+    @include span-columns(4 of 12);
+  }
+
+  @include media(min-width 550px) {
+    @include span-columns(1.5 of 6);
+  }
 }
 
 .project-card-info {
-  @include span-columns(8 of 12);
-  color: $dark-gray;
+  @include media(max-width 549px) {
+    @include span-columns(8 of 12);
+    color: $dark-gray;
+  }
 
-  h3 {
-    color: #000;
+  @include media(min-width 550px) {
+    @include span-columns(4.5 of 6);
+  }
+
+  h3, p {
+    color: $dark-gray;
   }
 }
 
@@ -43,10 +72,24 @@
 
 // Forms::New Project & Edit Project
 
+#new-project-form-wrapper {
+  @include outer-container;
+}
+
 #new_project, #edit-project-form {
-  padding: 4rem 1rem 3rem 1rem;
-  margin: auto;
-  background-color: $basic;
+  @include media(max-width 549px) {
+    @include span-columns(12);
+    padding: 4rem 1rem 3rem 1rem;
+    margin: auto;
+    background-color: $basic;
+  }
+
+  @include media(min-width 550px) {
+      @include span-columns(6);
+      @include shift(3);
+      padding: 4rem 1rem 3rem 1rem;
+      background-color: $basic;
+  }
 
   & input {
     width: 100%;
@@ -55,6 +98,7 @@
   & textarea {
     width: 100%;
   }
+
 }
 
 // Forms::Sign Up & Login
@@ -161,7 +205,8 @@ input[type="submit"] {
   color: #fff;
   background-color: $green;
   text-align: center;
-  margin: 0.5rem 0 0 0;
+  position:relative;
+  top: 0.5rem;
   border-radius: $base-border-radius;
   padding: $small-spacing $base-spacing;
   border: 0;
