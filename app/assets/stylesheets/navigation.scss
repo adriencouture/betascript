@@ -61,7 +61,7 @@
 
 #search-feature {
   padding-top: 2.95rem;
-  background-color: $dark-gray;
+  // background-color: $dark-gray;
   width: 100%;
   border-bottom: 1px solid $light-gray;
 }
@@ -73,8 +73,18 @@
 
 #search {
   width: 80%;
-  border: 1px solid $light-gray;
   line-height: 1.35;
+  border: none;
+  border-bottom: 1px solid $light-gray;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+#search-image {
+  position: relative;
+  top: 0.2rem;
 }
 
 // Hamburger Menu

@@ -1,6 +1,7 @@
 <div id="search-feature">
   <%= form_tag projects_path, method: :get, id: 'search-form' do %>
     <div id="search-input">
+      <%= image_tag "search-image.png", id: "search-image"%>
       <%= text_field_tag :search, params[:search], :placeholder => "Search Projects" %>
     </div>
   <% end %>
