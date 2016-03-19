@@ -4,7 +4,7 @@
   <p>
     <strong>Projects:</strong><br>
     <% @user.projects.each do |t| %>
-    <%= t.title %><br>
+    <%= link_to "#{t.title}", project_path(@user, @project) %><br>
     <% end %>
   </p>
 </div>
