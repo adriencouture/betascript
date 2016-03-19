@@ -166,7 +166,7 @@
 
 #search-feature {
   padding-top: 2.95rem;
-  background-color: $basic;
+  background-color: $basic; // yellow;
   width: 100%;
   border-bottom: 1px solid $light-gray;
 }
@@ -182,6 +182,7 @@
   border: none;
   border-radius: 0;
   border-bottom: 1px solid $light-gray;
+  // background-color: yellow;
 
   &:focus {
     box-shadow: none;

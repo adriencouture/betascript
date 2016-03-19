@@ -4,9 +4,9 @@
 
 #projects-list a {
   @include media(max-width 549px) {
-  @include span-columns(12);
-  margin-bottom: 1rem;
-}
+    @include span-columns(12);
+    margin-bottom: 1rem;
+  }
   @include media(min-width 550px) {
     @include span-columns(6);
     @include omega(2n);
@@ -224,6 +224,7 @@ input[type="submit"] {
     background-color: $basic;
     margin: 0;
     color: $dark-gray;
+    clear: right;
   }
 
   textarea {
