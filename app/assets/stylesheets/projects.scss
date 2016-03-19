@@ -104,9 +104,19 @@
 // Forms::Sign Up & Login
 
 #login-form, #new-user-form {
-  padding: 4rem 1.5rem 3rem 1.5rem;
-  margin: auto;
-  background-color: $basic;
+  @include media(max-width 549px) {
+    @include span-columns(12);
+    padding: 4rem 1.5rem 3rem 1.5rem;
+    margin: auto;
+    background-color: $basic;
+  }
+
+  @include media(min-width 550px) {
+      @include span-columns(6);
+      @include shift(3);
+      padding: 4rem 1.5rem 3rem 1.5rem;
+      background-color: $basic;
+  }
 
   & input {
     width: 100%;
@@ -276,9 +286,19 @@ input[type="submit"] {
 // Forms::Edit Scene
 
 #edit-scene-form {
-  padding: 4rem 1rem 3rem 1rem;
-  margin: auto;
-  background-color: $basic;
+  @include media(max-width 549px) {
+    @include span-columns(12);
+    padding: 4rem 1rem 3rem 1rem;
+    margin: auto;
+    background-color: $basic;
+  }
+
+  @include media(min-width 550px) {
+      @include span-columns(6);
+      @include shift(3);
+      padding: 4rem 1rem 3rem 1rem;
+      background-color: $basic;
+  }
 }
 
 #edit-btn input {
