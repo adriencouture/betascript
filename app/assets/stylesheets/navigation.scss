@@ -1,61 +1,165 @@
 .navbar {
+  @include media(max-width 549px) {
   position: fixed;
   background-color: $basic;
   width: 100%;
   z-index: 5;
   border-bottom: 1px solid $light-gray;
-}
 
-.navbar-navigation-left {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: #fff;
-  text-align: center;
-  width: 100%;
-  // border-bottom: 1px solid $light-gray;
+    .navbar-navigation-left {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      background-color: #fff;
+      text-align: center;
+      width: 100%;
+      // border-bottom: 1px solid $light-gray;
 
-  a {
-  color: #000;
-  text-decoration: none;
+      a {
+      color: #000;
+      text-decoration: none;
+      }
+    }
+
+    .navbar-navigation-right {
+      padding: 1.2rem 0rem 1.2rem 0rem;
+      float: right;
+      width: 100%;
+      background-color: $blue;
+
+      li {
+      display: inline;
+      width: 100%;
+      // padding-left: 1rem;
+      font-size: 0.9rem;
+      // padding: 0.2rem 0 0.2rem 1rem;
+      }
+
+      a {
+      margin-left: 1rem;
+      padding-top: 0.2rem;
+      color: $basic;
+      text-decoration: none;
+      transition: color $base-duration $base-timing;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: shade($action-color, 25%);
+      }
+      }
+    }
+
+    .logo-nav {
+      font-family: monospace;
+      font-size: 1.5rem;
+    }
+
+    // Hamburger Menu
+
+    #nav-toggle {
+      position: absolute;
+      right: 35px;
+      top: 22px;
+      cursor: pointer;
+    }
+
+    #nav-toggle span,
+    #nav-toggle span:before,
+    #nav-toggle span:after {
+      cursor: pointer;
+      height: 2px;
+      width: 20px;
+      background: #000;
+      position: absolute;
+      display: block;
+      content: '';
+
+      transition: all 0.25s $ease-out-back;
+
+    }
+
+    #nav-toggle span::before {
+      top: -5px;
+    }
+
+    #nav-toggle span::after {
+      bottom: -5px;
+    }
+
+    .sidebar {
+      position: fixed;
+      width: 100%;
+      z-index: -1;
+      top: -2rem;
+
+      transition: top 0.25s $ease-out-sine;
+
+      &.is-open {
+        top: 2.65rem;
+      }
+    }
+
+    #nav-toggle.is-open span {
+      background-color: transparent;
+    }
+
+    #nav-toggle.is-open span::before {
+      top: 0;
+      transform: rotateZ(45deg);
+    }
+
+    #nav-toggle.is-open span::after {
+      bottom: 0;
+      transform: rotateZ(-45deg);
+    }
   }
-}
 
-.navbar-navigation-right {
-  padding: 1.2rem 1rem 1.2rem 1rem;
-  width: 100%;
-  background-color: $blue;
+  @include media(min-width 550px) {
+    position: fixed;
+    background-color: $basic;
+    width: 100%;
+    z-index: 5;
+    border-bottom: 1px solid $light-gray;
 
-  li {
-  display: inline;
-  padding-left: 1rem;
-  font-size: 0.9rem;
-  // padding: 0.2rem 0 0.2rem 1rem;
+    .navbar-navigation-left {
+      float: left;
+      padding: 0.5rem 0 0.5rem 1rem;
+      background-color: #fff;
+      // border-bottom: 1px solid $light-gray;
+
+      a {
+      color: #000;
+      text-decoration: none;
+      }
+    }
+
+    .logo-nav {
+      font-family: monospace;
+      font-size: 1.5rem;
+    }
+
+    .navbar-navigation-right {
+      float: right;
+      padding: 0.8rem 1rem 0 0;
+
+      li {
+        display: inline;
+        padding-left: 1rem;
+        font-size: 0.9rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $medium-gray;
+        transition: color $base-duration $base-timing;
+
+      &:hover {
+        color: shade($dark-gray, 25%);
+      }
+
+      }
+    }
   }
-
-  a {
-  float: right;
-  margin-left: 1rem;
-  padding-top: 0.2rem;
-  color: $basic;
-  text-decoration: none;
-  transition: color $base-duration $base-timing;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: shade($action-color, 25%);
-  }
-  }
-}
-
-// .navbar-navigation-left a {
-//   color: $brand;
-//   color: $medium-gray;
-// }
-
-.logo-nav {
-  font-family: monospace;
-  font-size: 1.5rem;
 }
 
 // Search Bar::Project Index Page
@@ -76,6 +180,7 @@
   width: 80%;
   line-height: 1.35;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid $light-gray;
 
   &:focus {
@@ -86,63 +191,4 @@
 #search-image {
   position: relative;
   top: 0.2rem;
-}
-
-// Hamburger Menu
-
-#nav-toggle {
-  position: absolute;
-  right: 35px;
-  top: 22px;
-  cursor: pointer;
-}
-
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  height: 2px;
-  width: 20px;
-  background: #000;
-  position: absolute;
-  display: block;
-  content: '';
-
-  transition: all 0.25s $ease-out-back;
-
-}
-
-#nav-toggle span::before {
-  top: -5px;
-}
-
-#nav-toggle span::after {
-  bottom: -5px;
-}
-
-.sidebar {
-  position: fixed;
-  width: 100%;
-  z-index: -1;
-  top: -2rem;
-
-  transition: top 0.25s $ease-out-sine;
-
-  &.is-open {
-    top: 2.65rem;
-  }
-}
-
-#nav-toggle.is-open span {
-  background-color: transparent;
-}
-
-#nav-toggle.is-open span::before {
-  top: 0;
-  transform: rotateZ(45deg);
-}
-
-#nav-toggle.is-open span::after {
-  bottom: 0;
-  transform: rotateZ(-45deg);
 }
