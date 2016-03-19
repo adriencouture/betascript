@@ -164,20 +164,41 @@ input[type="submit"] {
 // Show Page::Project & Script Show
 
 #right-sidebar {
-  @include span-columns(12);
-  padding: 4rem 1rem 3rem 1rem;
-  margin: auto;
-  background-color: $basic;
-  border-bottom: 1px solid $light-gray;
+  @include media(max-width 549px) {
+    @include span-columns(12);
+    padding: 4rem 1rem 3rem 1rem;
+    margin: auto;
+    background-color: $basic;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  @include media(min-width 550px) {
+    @include span-columns(4 of 12);
+    float: right;
+    padding: 4rem 1rem 3rem 1rem;
+    background-color: $basic;
+    border-bottom: 1px solid $light-gray;
+    margin: 0;
+  }
+
 }
 
 #script-container {
-  @include span-columns(12);
-  padding: 1rem 1rem 3rem 1rem;
-  margin: auto;
-  background-color: $basic;
-  margin-top: 1rem;
-  border-bottom: 1px solid $light-gray;
+  @include media(max-width 549px) {
+    @include span-columns(12);
+    padding: 1rem 1rem 3rem 1rem;
+    margin: auto;
+    background-color: $basic;
+    margin-top: 1rem;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  @include media(min-width 550px) {
+    @include span-columns(8 of 12);
+    padding: 4rem 1rem 3rem 1rem;
+    background-color: $basic;
+    margin: 0;
+  }
 
   h1 {
     font-family: Monospace;
@@ -187,12 +208,23 @@ input[type="submit"] {
 }
 
 #comments {
-  @include span-columns(12);
-  padding: 1rem 1rem 3rem 1rem;
-  margin: auto;
-  background-color: $basic;
-  margin-top: 1rem;
-  color: $dark-gray;
+  @include media(max-width 549px) {
+    @include span-columns(12);
+    padding: 1rem 1rem 3rem 1rem;
+    margin: auto;
+    background-color: $basic;
+    margin-top: 1rem;
+    color: $dark-gray;
+  }
+
+  @include media(min-width 550px) {
+    @include span-columns(4 of 12);
+    float: right;
+    padding: 3rem 1rem 3rem 1rem;
+    background-color: $basic;
+    margin: 0;
+    color: $dark-gray;
+  }
 
   textarea {
     width: 100%;
