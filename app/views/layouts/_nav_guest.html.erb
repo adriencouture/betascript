@@ -1,9 +1,14 @@
 <div class="navbar">
+  <aside class="sidebar">
+    <ul class="navbar-navigation-right">
+      <li><%= link_to "Login", :login %></li>
+      <li><%= link_to "Sign up", new_user_path %></li>
+    </ul>
+  </aside>
+
   <ul class="navbar-navigation-left">
-    <li><span id="logo"><%= link_to "BetaScript", projects_path %><span></li>
+    <li><%= link_to "BetaScript", projects_path, class: "logo-nav" %></li>
   </ul>
-  <ul class="navbar-navigation-right">
-    <li><%= link_to "Sign up", new_user_path %></li>
-    <li><%= link_to "Login", :login %></li>
-  </ul>
+  <a id="nav-toggle" href="#"><span></span></a>
+
 </div>

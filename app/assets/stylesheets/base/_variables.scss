@@ -1,5 +1,5 @@
 // $visual-grid: true;
-// $visual-grid-color: blue;
+// $visual-grid-color: yellow;
 
 // Breakpoints
 $medium-screen: 600px;
@@ -23,7 +23,7 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #8DE2D7;
+$green: #0AA35B;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
@@ -31,10 +31,12 @@ $turquoise: #71D6E3;
 $brand: #02C39A;
 $basic: #FFFFFF;
 $form-gray: #f7f7f7;
+$action: #007AFF;
+$blue: #366ED4;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $medium-gray;
+$action-color: $action;
 
 // Border
 $base-border-color: $light-gray;

@@ -34,17 +34,17 @@
 //   }
 // }
 
-#{$all-buttons} {
-  appearance: none;
-  background-color: $medium-gray;
-  text-decoration: none;
-  color: $basic;
-  border-radius: $base-border-radius;
-  padding: $small-spacing $base-spacing;
-  border: 0;
-
-  &:hover,
-  &:focus {
-    background-color: shade($light-gray, 20%)
-  }
-}
+// #{$all-buttons} {
+//   appearance: none;
+//   background-color: $medium-gray;
+//   text-decoration: none;
+//   color: $basic;
+//   border-radius: $base-border-radius;
+//   padding: $small-spacing $base-spacing;
+//   border: 0;
+//
+//   &:hover,
+//   &:focus {
+//     background-color: shade($light-gray, 20%)
+//   }
+// }

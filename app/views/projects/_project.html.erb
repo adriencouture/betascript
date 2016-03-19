@@ -9,7 +9,7 @@
         <%= project.title %>
       </h3>
 
-      <p><%= truncate(project.description, length: 140) %></p>
+      <p><%= truncate(project.description, length: 90) %></p>
       <p>
         <strong>Tags:</strong>
         <% project.tags.each do |t| %>

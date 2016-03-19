@@ -37,10 +37,11 @@
   </div>
 
 
-  <h3>Tags</h3>
+  <!-- <h3>Tags</h3> -->
 
   <%= f.fields_for :tags, Tag.new do |tag_field| %>
   <div class="field">
+    <%= f.label :Tags %>
     <%= tag_field.text_field :title, :placeholder => "Separate tags with spaces" %>
   </div>
   <% end %>

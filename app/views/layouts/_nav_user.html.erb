@@ -1,10 +1,15 @@
 <div class="navbar">
-  <ul class="navbar-navigation-left">
-    <li><%= link_to "BetaScript", projects_path, id: "logo-nav" %></li>
-  </ul>
-  <ul class="navbar-navigation-right">
-    <li id="new-project-button"><%= link_to 'New Project', new_project_path %></li>
-    <li><%= link_to "#{current_user.first_name}'s profile", user_path(current_user.id) %></li>
-    <li><%= link_to "Logout", :logout, method: :post %></li>
-  </ul>
+  <aside class="sidebar">
+    <ul class="navbar-navigation-right">
+      <li><%= link_to "Logout", :logout, method: :post %></li>
+      <li><%= link_to "#{current_user.first_name}'s profile", user_path(current_user.id) %></li>
+      <li id="new-project-button"><%= link_to 'New Project', new_project_path %></li>
+    </ul>
+  </aside>
+
+  <div class="navbar-navigation-left">
+    <%= link_to "BetaScript", projects_path, class: "logo-nav" %>
+  </div>
+  <a id="nav-toggle" href="#"><span></span></a>
+
 </div>

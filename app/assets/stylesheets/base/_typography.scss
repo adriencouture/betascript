@@ -34,9 +34,11 @@ p {
 }
 
 // a {
-//   color: $action-color;
+//   color: $basic;
 //   text-decoration: none;
 //   transition: color $base-duration $base-timing;
+//   background-color: $medium-gray;
+//   padding: 1em;
 //
 //   &:active,
 //   &:focus,
@@ -44,22 +46,6 @@ p {
 //     color: shade($action-color, 25%);
 //   }
 // }
-
-.navbar a {
-  color: $medium-gray;
-  text-decoration: none;
-  transition: color $base-duration $base-timing;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: shade($action-color, 25%);
-  }
-}
-
-.navbar-navigation-left a {
-  color: $brand;
-}
 
 hr {
   border-bottom: $base-border;
