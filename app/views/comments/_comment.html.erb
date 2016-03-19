@@ -1,11 +1,13 @@
 <!--  This is form partial to SHOW all comments on a project -->
 
-<% @project.comments.each do |comment| %>
-  <p>
+
     <% if comment.user != nil %>
+    <div class="comment">
       <p><span id="comment-name"><%= comment.user.first_name %> <%= comment.user.last_name %></span>
       <span id="comment-time"><%= comment.created_at.strftime('%b %e, %l:%M %p') %></span></p>
-      <%= comment.comment %>
+
+      <p>
+        <%= comment.comment %>
+      </p>
+    </div>
     <% end %>
-  </p>
-<% end %>

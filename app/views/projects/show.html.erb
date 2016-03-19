@@ -55,7 +55,6 @@
     <div id="comments">
       <div id="comment-form">
         <% if current_user %>
-        <!-- <h3>Leave a Comment. Be Beta.</h3> -->
         <%= render partial: "create_comment" %>
         <% else %>
         <p>Please <%= link_to "log in", login_path %> to post a comment.</p>
@@ -64,7 +63,7 @@
 
       <div id="comment-list">
         <h3>Comments:</h3>
-        <%= render partial: "comments" %>
+        <%= render @project.comments %>
       </div>
     </div>
 

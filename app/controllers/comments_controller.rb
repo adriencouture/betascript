@@ -9,10 +9,15 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to project_path(@project), notice: "Commenting is 'Beta' than not commenting..."
+      respond_to do |format|
+        format.html
+        format.js
+      end
+      # redirect_to project_path(@project)
     else
       render :new
     end
+
 
   end
 

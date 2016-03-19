@@ -22,6 +22,19 @@ $(document).on('ready page:load', function() {
             cursorChar: "|"
         });
     });
+
+
+  // Testing if comments script should go here:
+  $('form#new_comment input').on('submit', function(event){
+    event.preventDefault();
+
+
+  })
+
+
+
+
+  // This below is all rangy stuff.
   // function gEBI(id) {
   //   return document.getElementById(id);
   // }
