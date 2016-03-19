@@ -4,7 +4,9 @@
   <p>
     <strong>Projects:</strong><br>
     <% @user.projects.each do |t| %>
-    <%= t.title %><br>
+    <%= link_to "#{t.title}", project_path(@user, @project) %><br>
+    Started on: <%= t.created_at.strftime('%b %e, %l:%M %p') %><br>
+    Last updated on: <%= t.updated_at.strftime('%b %e, %l:%M %p') %><br>
     <% end %>
   </p>
 </div>
