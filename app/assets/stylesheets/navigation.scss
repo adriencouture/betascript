@@ -1,18 +1,18 @@
 .navbar {
   position: fixed;
   background-color: $basic;
-  height: 5rem;
   width: 100%;
-  z-index: 2;
-  // padding: 1.2rem 1rem;
+  z-index: 5;
   border-bottom: 1px solid $light-gray;
 }
 
 .navbar-navigation-left {
-  // float:left;
-  padding-top: 0.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #fff;
   text-align: center;
   width: 100%;
+  // border-bottom: 1px solid $light-gray;
 
   a {
   color: #000;
@@ -21,16 +21,21 @@
 }
 
 .navbar-navigation-right {
-  padding: 0.8rem 1rem 1.2rem 1rem;
-  float:right;
+  padding: 1.2rem 1rem 1.2rem 1rem;
+  width: 100%;
+  background-color: $blue;
 
   li {
   display: inline;
   padding-left: 1rem;
+  // padding: 0.2rem 0 0.2rem 1rem;
   }
 
   a {
-  color: $medium-gray;
+  float: right;
+  // font-weight: normal;
+  margin-left: 1rem;
+  color: $basic;
   text-decoration: none;
   transition: color $base-duration $base-timing;
 
@@ -55,20 +60,78 @@
 // Search Bar::Project Index Page
 
 #search-feature {
-  padding-top: 5rem;
-  background-color: $basic;
+  padding-top: 2.95rem;
+  background-color: $dark-gray;
   width: 100%;
   border-bottom: 1px solid $light-gray;
 }
 
 #search-input {
   text-align: center;
-  margin: 8px 0 0 0;
+  margin: 0.4rem 0 0 0;
 }
 
 #search {
   width: 80%;
-  // background-color: $form-gray;
   border: 1px solid $light-gray;
-  line-height: 1.4;
+  line-height: 1.35;
+}
+
+// Hamburger Menu
+
+#nav-toggle {
+  position: absolute;
+  right: 35px;
+  top: 22px;
+  cursor: pointer;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  height: 2px;
+  width: 20px;
+  background: #000;
+  position: absolute;
+  display: block;
+  content: '';
+
+  transition: all 0.25s $ease-out-back;
+
+}
+
+#nav-toggle span::before {
+  top: -5px;
+}
+
+#nav-toggle span::after {
+  bottom: -5px;
+}
+
+.sidebar {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  top: -2rem;
+
+  transition: top 0.25s $ease-out-sine;
+
+  &.is-open {
+    top: 2.65rem;
+  }
+}
+
+#nav-toggle.is-open span {
+  background-color: transparent;
+}
+
+#nav-toggle.is-open span::before {
+  top: 0;
+  transform: rotateZ(45deg);
+}
+
+#nav-toggle.is-open span::after {
+  bottom: 0;
+  transform: rotateZ(-45deg);
 }

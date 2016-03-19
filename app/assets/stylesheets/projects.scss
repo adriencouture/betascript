@@ -15,7 +15,7 @@
 
 #projects {
   width: 100%;
-  padding: 1rem 0.8rem 3rem 0.8rem;
+  padding: 1rem 1rem 3rem 1rem;
   background-color: $basic;
 }
 
@@ -32,10 +32,19 @@
   }
 }
 
+.show-page-btn {
+  padding-top: 1rem;
+
+  a {
+    text-decoration: none;
+    color: $medium-gray;
+  }
+}
+
 // Forms::New Project & Edit Project
 
 #new_project, #edit-project-form {
-  padding: 3rem 1.5rem;
+  padding: 4rem 1rem 3rem 1rem;
   margin: auto;
   background-color: $basic;
 
@@ -51,7 +60,7 @@
 // Forms::Sign Up & Login
 
 #login-form, #new-user-form {
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem 3rem 1.5rem;
   margin: auto;
   background-color: $basic;
 
@@ -92,27 +101,40 @@ input[type="submit"] {
 #show-container {
   @include outer-container;
 }
+// User Show Page
+
+#user-show {
+  padding: 4rem 1rem 3rem 1rem;
+}
 
 // Show Page::Project & Script Show
 
 #right-sidebar {
   @include span-columns(12);
-  padding: 6rem 0.8rem 1rem 0.8rem;
+  padding: 4rem 1rem 3rem 1rem;
   margin: auto;
   background-color: $basic;
+  border-bottom: 1px solid $light-gray;
 }
 
 #script-container {
   @include span-columns(12);
-  padding: 1rem 0.8rem 3rem 0.8rem;
+  padding: 1rem 1rem 3rem 1rem;
   margin: auto;
   background-color: $basic;
   margin-top: 1rem;
+  border-bottom: 1px solid $light-gray;
+
+  h1 {
+    font-family: Monospace;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }
 
 #comments {
   @include span-columns(12);
-  padding: 1rem 0.8rem 3rem 0.8rem;
+  padding: 1rem 1rem 3rem 1rem;
   margin: auto;
   background-color: $basic;
   margin-top: 1rem;
@@ -132,6 +154,17 @@ input[type="submit"] {
 #comment-time {
   font-size: 0.9rem;
   color: $medium-gray;
+}
+
+#all-projects-link {
+  text-decoration: none;
+  color: #fff;
+  background-color: $green;
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+  border-radius: $base-border-radius;
+  padding: $small-spacing $base-spacing;
+  border: 0;
 }
 
 // Forms::Script & Character
@@ -198,7 +231,7 @@ input[type="submit"] {
 // Forms::Edit Scene
 
 #edit-scene-form {
-  padding: 3rem 0.8rem;
+  padding: 4rem 1rem 3rem 1rem;
   margin: auto;
   background-color: $basic;
 }
