@@ -14,4 +14,21 @@ $(document).on('ready page:load', function() {
       data: self.serialize()
     });
   });
+
+  // This function works:
+  var addCharacterScroll = function() {
+    var currentHeight = $(window).scrollTop();
+    $('html, body').animate({ scrollTop: currentHeight + 300 }, 500);
+  }
+
+  $('a.add_fields').on('click', addCharacterScroll);
+
+  var removeCharacterScroll = function() {
+    var currentHeight = $(window).scrollTop();
+    $('html, body').animate({ scrollTop: currentHeight - 300 }, 2000);
+  }
+
+  $('a.remove_fields.dynamic').on('click', removeCharacterScroll);
+
+
 });
