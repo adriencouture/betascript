@@ -28,13 +28,14 @@
   li {
   display: inline;
   padding-left: 1rem;
+  font-size: 0.9rem;
   // padding: 0.2rem 0 0.2rem 1rem;
   }
 
   a {
   float: right;
-  // font-weight: normal;
   margin-left: 1rem;
+  padding-top: 0.2rem;
   color: $basic;
   text-decoration: none;
   transition: color $base-duration $base-timing;
