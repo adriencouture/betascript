@@ -19,12 +19,15 @@
     background-color: $basic;
     height: 185px;
     overflow: hidden;
+    border-radius: $base-border-radius;
+    box-shadow: 0px 1px 1px 1px $light-gray;
   }
 
   @include media(min-width 550px) {
     background-color: $basic;
-    border: 1px solid $light-gray;
+    // border: 1px solid $light-gray;
     border-radius: $base-border-radius;
+    box-shadow: 0px 1px 1px 1px $light-gray;
     height: 185px;
     overflow: hidden;
   }
@@ -34,13 +37,14 @@
   @include media(max-width 549px) {
     width: 100%;
     padding: 1rem 1rem 3rem 1rem;
-    background-color: $basic;
+    // background-color: $basic;
   }
 
   @include media(min-width 550px) {
     width: 100%;
     padding: 1rem 1rem 3rem 1rem;
-    background-color: #FAFAFA;
+    // background-color: #FAFAFA;
+
   }
 }
 
@@ -168,7 +172,7 @@ input[type="submit"] {
 }
 
 .background {
-  background-color: #FAFAFA;
+  background-color: #F1F1F1; //#FAFAFA;
 }
 
 #show-container {
