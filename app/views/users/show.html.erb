@@ -1,12 +1,14 @@
-<div id="user-show">
-  <h1><%= @user.first_name %>'s Profile</h1>
+<div class="background">
+  <div id="user-show">
+    <h1><%= @user.first_name %>'s Profile</h1>
 
-  <p>
-    <strong>Projects:</strong><br>
-    <% @user.projects.each do |t| %>
-    <%= link_to "#{t.title}", project_path(@user, @project) %><br>
-    Started on: <%= t.created_at.strftime('%b %e, %l:%M %p') %><br>
-    Last updated on: <%= t.updated_at.strftime('%b %e, %l:%M %p') %><br>
-    <% end %>
-  </p>
+    <p>
+      <strong>Projects:</strong><br>
+      <% @user.projects.each do |t| %>
+      <%= link_to "#{t.title}", project_path(@user, @project) %><br>
+      Started on: <%= t.created_at.strftime('%b %e, %l:%M %p') %><br>
+      Last updated on: <%= t.updated_at.strftime('%b %e, %l:%M %p') %><br>
+      <% end %>
+    </p>
+  </div>
 </div>
