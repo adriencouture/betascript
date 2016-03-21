@@ -5,7 +5,8 @@
     <p>
       <strong>Projects:</strong><br>
       <% @user.projects.each do |t| %>
-      <%= link_to "#{t.title}", project_path(@user, @project) %><br>
+      <%= image_tag t.cover_image.url(:thumb) %>
+      <%= link_to "#{t.title}", project_path(t) %><br>
       Started on: <%= t.created_at.strftime('%b %e, %l:%M %p') %><br>
       Last updated on: <%= t.updated_at.strftime('%b %e, %l:%M %p') %><br>
       <% end %>

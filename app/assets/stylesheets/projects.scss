@@ -40,13 +40,13 @@ body {
 #projects {
   @include media(max-width 549px) {
     width: 100%;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 8rem 1rem;
     // background-color: $basic;
   }
 
   @include media(min-width 550px) {
     width: 100%;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 8rem 1rem;
     // background-color: #FAFAFA;
 
   }
@@ -113,7 +113,7 @@ body {
       @include span-columns(6);
       @include shift(3);
       padding: 4rem 1rem 3rem 1rem;
-      background-color: $basic;
+      // background-color: $basic;
   }
 
   & input {
@@ -181,10 +181,11 @@ input[type="submit"] {
   background-color: $blue;
 }
 
-.background {
-  background-color: #F1F1F1; //#FAFAFA;
-  height: auto;
-}
+// .background {
+//   background-color: #F1F1F1; //#FAFAFA;
+//   height: auto;
+//   min-height: 100%;
+// }
 
 #show-container {
   @include outer-container;
@@ -244,7 +245,7 @@ input[type="submit"] {
 #comments {
   @include media(max-width 549px) {
     @include span-columns(12);
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 8rem 1rem;
     margin: auto;
     // background-color: $basic;
     margin-top: 1rem;
@@ -407,7 +408,7 @@ a.add_fields {
 a.remove_fields {
   float: left;
   text-decoration: none;
-  color: #fff;
+  color: $basic;
   background-color: $dark-gray;
   text-align: center;
   margin: 0.5rem 0.5rem 0 0;
@@ -423,23 +424,32 @@ a.remove_fields {
 
 // Footer
 
-// #webpage {
-//   height: 100%;
-// }
+#webpage {
+  background-color: #F1F1F1; //#FAFAFA;
+  height: auto;
+  min-height: 100%;
+}
 //
-// #footer {
-//   position: relative;
-//   // bottom: 0;
-//   // margin-top: 5rem;
-//   width: 100%;
-//   height: 5rem;
-//   clear: both;
-//   background-color: #3E3D3F;
-//   color: $icon-gray;
-//
-//   p, a {
-//     float: right;
-//     padding: 1rem 1rem 0 0;
-//     font-size: 0.8rem;
-//   }
-// }
+#footer {
+  position: relative;
+  bottom: 0;
+  margin-top: -5rem;
+  width: 100%;
+  height: 5rem;
+  clear: both;
+  background-color: #3E3D3F;
+  color: $icon-gray;
+
+  a {
+    float: right;
+    padding: 1rem 1rem 0 0;
+    font-size: 0.8rem;
+  }
+
+  p {
+    float: left;
+    padding: 1rem 0 0 1rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
