@@ -2,14 +2,28 @@
   <div id="user-show">
     <h1><%= @user.first_name %>'s Profile</h1>
 
-    <p>
+    <ul class="projects-list">
       <strong>Projects:</strong><br>
       <% @user.projects.each do |t| %>
-      <%= image_tag t.cover_image.url(:thumb) %>
-      <%= link_to "#{t.title}", project_path(t) %><br>
-      Started on: <%= t.created_at.strftime('%b %e, %l:%M %p') %><br>
-      Last updated on: <%= t.updated_at.strftime('%b %e, %l:%M %p') %><br>
+      <%= link_to project_path(t) do %>
+      <li class="project-item">
+        <div class="project-thumb-image">
+          <%= image_tag t.cover_image.url(:thumb) %>
+        </div>
+
+        <div class="project-card-info">
+          <h3>
+            <%= "#{t.title}" %>
+          </h3>
+
+          <p>
+            Started on: <%= t.created_at.strftime('%b %e, %l:%M %p') %><br>
+            Last updated on: <%= t.updated_at.strftime('%b %e, %l:%M %p') %><br>
+          </p>
+        </div>
+      </li>
       <% end %>
-    </p>
+      <% end %>
+    </ul>
   </div>
 </div>
