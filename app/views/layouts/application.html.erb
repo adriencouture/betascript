@@ -9,10 +9,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="webpage">
+    <%= render '/layouts/nav' %>
 
-<%= render '/layouts/nav' %>
+    <%= yield %>
+  </div>
 
-<%= yield %>
+  <!-- <div id="footer">
+    <a href="https://github.com/adriencouture/betascript", target="_blank">
+      <% image_tag "github.png", id: "github-image"%>
+    </a>
+    <p id="copy">&copy 2016 BetaScript.co | Project by Jonathan Alorda & Adrien Couture</p>
+  </div> -->
 
 </body>
 </html>

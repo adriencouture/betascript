@@ -5,7 +5,6 @@ body {
   line-height: $base-line-height;
 }
 
-h4,
 h5,
 h6 {
   font-family: $heading-font-family;
@@ -27,6 +26,13 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
+  margin-top: 0;
+}
+
+h4 {
+  font-family: $heading-font-family;
+  font-size: modular-scale(1);
+  margin: 0;
 }
 
 p {

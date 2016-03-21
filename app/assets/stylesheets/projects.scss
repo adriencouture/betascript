@@ -31,9 +31,17 @@
 }
 
 #projects {
-  width: 100%;
-  padding: 1rem 1rem 3rem 1rem;
-  background-color: $basic;
+  @include media(max-width 549px) {
+    width: 100%;
+    padding: 1rem 1rem 3rem 1rem;
+    background-color: $basic;
+  }
+
+  @include media(min-width 550px) {
+    width: 100%;
+    padding: 1rem 1rem 3rem 1rem;
+    background-color: #FAFAFA;
+  }
 }
 
 .project-thumb-image {
@@ -43,6 +51,7 @@
 
   @include media(min-width 550px) {
     @include span-columns(1.5 of 6);
+    background-size: cover;
   }
 }
 
@@ -50,10 +59,12 @@
   @include media(max-width 549px) {
     @include span-columns(8 of 12);
     color: $dark-gray;
+    padding: 1rem;
   }
 
   @include media(min-width 550px) {
     @include span-columns(4.5 of 6);
+    padding: 1rem;
   }
 
   h3, p {
@@ -127,6 +138,10 @@
   }
 }
 
+#forgot-password {
+  color: #1E90FF;
+}
+
 #remember label {
   width: 50px;
   height: 50px;
@@ -152,6 +167,10 @@ input[type="submit"] {
   background-color: $blue;
 }
 
+.background {
+  background-color: #FAFAFA;
+}
+
 #show-container {
   @include outer-container;
 }
@@ -168,7 +187,7 @@ input[type="submit"] {
     @include span-columns(12);
     padding: 4rem 1rem 3rem 1rem;
     margin: auto;
-    background-color: $basic;
+    // background-color: $basic;
     border-bottom: 1px solid $light-gray;
   }
 
@@ -176,7 +195,7 @@ input[type="submit"] {
     @include span-columns(4 of 12);
     float: right;
     padding: 4rem 1rem 3rem 1rem;
-    background-color: $basic;
+    // background-color: $basic;
     border-bottom: 1px solid $light-gray;
     margin: 0;
   }
@@ -188,7 +207,7 @@ input[type="submit"] {
     @include span-columns(12);
     padding: 1rem 1rem 3rem 1rem;
     margin: auto;
-    background-color: $basic;
+    // background-color: $basic;
     margin-top: 1rem;
     border-bottom: 1px solid $light-gray;
   }
@@ -196,7 +215,7 @@ input[type="submit"] {
   @include media(min-width 550px) {
     @include span-columns(8 of 12);
     padding: 4rem 1rem 3rem 1rem;
-    background-color: $basic;
+    // background-color: $basic;
     margin: 0;
   }
 
@@ -212,7 +231,7 @@ input[type="submit"] {
     @include span-columns(12);
     padding: 1rem 1rem 3rem 1rem;
     margin: auto;
-    background-color: $basic;
+    // background-color: $basic;
     margin-top: 1rem;
     color: $dark-gray;
   }
@@ -221,7 +240,7 @@ input[type="submit"] {
     @include span-columns(4 of 12);
     float: right;
     padding: 3rem 1rem 3rem 1rem;
-    background-color: $basic;
+    // background-color: $basic;
     margin: 0;
     color: $dark-gray;
     clear: right;
@@ -280,11 +299,13 @@ input[type="submit"] {
   font-family: Monospace;
   text-transform: uppercase;
   font-weight: bold;
+  color: $dark-gray;
 }
 
 .scene-action {
   font-family: Monospace;
   padding: 0.5rem 0;
+  color: $dark-gray;
 }
 
 .character-name {
@@ -293,17 +314,20 @@ input[type="submit"] {
   font-weight: bold;
   text-align: center;
   padding-top: 0.5rem;
+  color: $dark-gray;
 }
 
 .character-dialogue {
   font-family: Monospace;
   padding: 0.5rem 2rem 0.5rem 2rem;
+  color: $dark-gray;
 }
 
 .character-parenthetical {
   font-family: Monospace;
   padding: 0.5rem 0 0rem 0;
   text-align: center;
+  color: $dark-gray;
 }
 
 #edit-scene {
@@ -381,3 +405,25 @@ a.remove_fields {
   clear: both;
   padding-top: 1rem;
 }
+
+// Footer
+
+// #webpage {
+//   height: 100%;
+// }
+//
+// #footer {
+//   position: relative;
+//   bottom: -5rem;
+//   width: 100%;
+//   height: 5rem;
+//   clear: both;
+//   background-color: #3E3D3F;
+//   color: $icon-gray;
+//
+//   p, a {
+//     float: right;
+//     padding: 1rem 1rem 0 0;
+//     font-size: 0.8rem;
+//   }
+// }

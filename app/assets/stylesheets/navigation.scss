@@ -21,22 +21,19 @@
     }
 
     .navbar-navigation-right {
-      padding: 1.2rem 0rem 1.2rem 0rem;
+      padding: 1.4rem 0rem 1.2rem 0rem;
       float: right;
       width: 100%;
-      background-color: $blue;
+      background-color: $dark-gray;
 
       li {
       display: inline;
       width: 100%;
-      // padding-left: 1rem;
       font-size: 0.9rem;
-      // padding: 0.2rem 0 0.2rem 1rem;
       }
 
       a {
       margin-left: 1rem;
-      padding-top: 0.2rem;
       color: $basic;
       text-decoration: none;
       transition: color $base-duration $base-timing;
@@ -117,6 +114,7 @@
   @include media(min-width 550px) {
     position: fixed;
     background-color: $basic;
+    // background-color: #708B75; //#0067A3;
     width: 100%;
     z-index: 5;
     border-bottom: 1px solid $light-gray;
@@ -124,10 +122,12 @@
     .navbar-navigation-left {
       float: left;
       padding: 0.5rem 0 0.5rem 1rem;
-      background-color: #fff;
+      background-color:$basic;
+      // background-color: #708B75; //#0067A3;
       // border-bottom: 1px solid $light-gray;
 
       a {
+      // color: #000;
       color: #000;
       text-decoration: none;
       }
@@ -145,16 +145,16 @@
       li {
         display: inline;
         padding-left: 1rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
 
       a {
         text-decoration: none;
-        color: $medium-gray;
+        color: $medium-gray; //$basic; //#9AC9EC;
         transition: color $base-duration $base-timing;
 
       &:hover {
-        color: shade($dark-gray, 25%);
+        color: shade($medium-gray, 50%);
       }
 
       }
@@ -166,7 +166,7 @@
 
 #search-feature {
   padding-top: 2.95rem;
-  background-color: $basic; // yellow;
+  background-color: $basic; //#CF4646; //#BBBDC0; //$basic; //#3E3D3F; #F6D588; #9AB87A; #3E3D3F; $basic;
   width: 100%;
   border-bottom: 1px solid $light-gray;
 }
@@ -181,8 +181,9 @@
   line-height: 1.35;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray; //#404041; // $icon-gray; #708B75;
   // background-color: yellow;
+  background-color: $basic; //#CF4646; //#BBBDC0; //$basic; #3E3D3F; #9AB87A; #0079BF;
 
   &:focus {
     box-shadow: none;
@@ -191,5 +192,18 @@
 
 #search-image {
   position: relative;
-  top: 0.2rem;
+  top: 0.4rem;
+}
+
+input[type="text"].search-field::placeholder {
+  // color: $basic;
+  color: $medium-gray;
+  // color: #404041;
+  // color: #708B75;
+}
+
+input.search-field {
+  // color: $basic;
+  // color: #404041;
+  color: #dark-gray;
 }

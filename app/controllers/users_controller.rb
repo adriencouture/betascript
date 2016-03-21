@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       UserMailer.welcome_email(@user).deliver_later
 
       # session[:user_id] = user.id
-      redirect_to projects_path, notice: "Account was successfully created"
+      redirect_to projects_path
     else
       render :new
     end
