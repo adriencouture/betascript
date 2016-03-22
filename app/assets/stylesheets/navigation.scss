@@ -154,7 +154,7 @@
         transition: color $base-duration $base-timing;
 
       &:hover {
-        color: shade($medium-gray, 50%);
+        color: shade($dark-gray, 0%);
       }
 
       }

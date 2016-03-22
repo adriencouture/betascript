@@ -13,6 +13,7 @@ $(document).on('ready page:load', function() {
       type: 'GET',
       dataType: 'script'
     });
+    $('#all-projects-link').css({'visibility': 'visible'});
   });
 
   $(function(){

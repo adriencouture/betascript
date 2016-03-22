@@ -1,29 +1,27 @@
-<div class="background">
-  <div id="user-show">
-    <h1><%= @user.first_name %>'s Profile</h1>
+<div id="user-show">
+  <h1 class="align-header"><%= @user.first_name %>'s Profile</h1>
 
-    <ul class="projects-list">
-      <strong>Projects:</strong><br>
-      <% @user.projects.each do |t| %>
-      <%= link_to project_path(t) do %>
-      <li class="project-item">
-        <div class="project-thumb-image">
-          <%= image_tag t.cover_image.url(:thumb) %>
-        </div>
+  <ul class="projects-list">
+    <!-- <strong>Projects:</strong><br> -->
+    <% @user.projects.each do |t| %>
+    <%= link_to project_path(t) do %>
+    <li class="project-item">
+      <div class="project-thumb-image">
+        <%= image_tag t.cover_image.url(:thumb) %>
+      </div>
 
-        <div class="project-card-info">
-          <h3>
-            <%= "#{t.title}" %>
-          </h3>
+      <div class="project-card-info">
+        <h3>
+          <%= "#{t.title}" %>
+        </h3>
 
-          <p>
-            Started on: <%= t.created_at.strftime('%b %e, %l:%M %p') %><br>
-            Last updated on: <%= t.updated_at.strftime('%b %e, %l:%M %p') %><br>
-          </p>
-        </div>
-      </li>
-      <% end %>
-      <% end %>
-    </ul>
-  </div>
+        <p>
+          Started on: <%= t.created_at.strftime('%b %e, %l:%M %p') %><br>
+          Last updated on: <%= t.updated_at.strftime('%b %e, %l:%M %p') %><br>
+        </p>
+      </div>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
 </div>

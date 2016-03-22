@@ -6,7 +6,7 @@
     </div>
   <% end %>
 </div>
-<div class="background">
+
   <!-- <div id="hero-container">
     <div class="animated-text">
       <span class="typed-script"><span>
@@ -14,14 +14,13 @@
     </div>
   </div> -->
 
-  <div id="projects">
-      <ul class="projects-list">
-        <h1>Projects</h1><br>
-        <%= render @projects %>
-      </ul>
+<div id="projects">
+  <h1 class="align-header">Projects</h1>
+    <ul class="projects-list">
+      <%= render @projects %>
+    </ul>
+</div>
 
-      <%= link_to 'Back', projects_path, id: "all-projects-link" %>
-
-  </div>
-
+<div id="projects-back-link">
+  <%= link_to 'Back', projects_path, id: "all-projects-link" %>
 </div>
