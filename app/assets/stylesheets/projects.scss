@@ -152,7 +152,7 @@ body {
 #login-form, #new-user-form {
   @include media(max-width 549px) {
     @include span-columns(12);
-    padding: 4rem 1.5rem 3rem 1.5rem;
+    padding: 4rem 1.5rem 8rem 1.5rem;
     margin: auto;
     background-color: $basic;
   }
@@ -497,4 +497,9 @@ a.remove_fields {
     font-size: 0.8rem;
     line-height: 1.4;
   }
+}
+
+.background {
+  height: 100%;
+  background-color: $basic;
 }
