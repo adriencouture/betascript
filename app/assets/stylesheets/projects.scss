@@ -154,6 +154,7 @@ body {
     @include span-columns(12);
     padding: 4rem 1.5rem 8rem 1.5rem;
     margin: auto;
+    background-color: $basic;
   }
 
   @include media(min-width 550px) {
