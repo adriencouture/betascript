@@ -281,7 +281,7 @@ input[type="submit"] {
   @include media(min-width 550px) {
     @include span-columns(4 of 12);
     float: right;
-    padding: 3rem 1rem 8rem 1rem;
+    padding: 1rem 1rem 8rem 1rem;
     // background-color: $basic;
     margin: 0;
     color: $dark-gray;
