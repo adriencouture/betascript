@@ -127,14 +127,13 @@
       // border-bottom: 1px solid $light-gray;
 
       a {
-      // color: #000;
       color: #000;
       text-decoration: none;
       }
     }
 
     .logo-nav {
-      font-family: monospace;
+      font-family: Monospace;
       font-size: 1.5rem;
     }
 
@@ -166,7 +165,7 @@
 
 #search-feature {
   padding-top: 2.95rem;
-  background-color: $basic; //#CF4646; //#BBBDC0; //$basic; //#3E3D3F; #F6D588; #9AB87A; #3E3D3F; $basic;
+  background-color: $basic; //#CF4646; //#BBBDC0; //$basic; //#3E3D3F; #F6D588; #9AB87A; #3E3D3F;
   width: 100%;
   border-bottom: 1px solid $light-gray;
 }
@@ -181,9 +180,8 @@
   line-height: 1.35;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid $light-gray; //#404041; // $icon-gray; #708B75;
-  // background-color: yellow;
-  background-color: $basic; //#CF4646; //#BBBDC0; //$basic; #3E3D3F; #9AB87A; #0079BF;
+  border-bottom: 1px solid $light-gray; //#404041; #708B75;
+  background-color: $basic; //#CF4646; //#BBBDC0; #3E3D3F; #9AB87A; #0079BF;
 
   &:focus {
     box-shadow: none;
@@ -196,14 +194,9 @@
 }
 
 input[type="text"].search-field::placeholder {
-  // color: $basic;
   color: $medium-gray;
-  // color: #404041;
-  // color: #708B75;
 }
 
 input.search-field {
-  // color: $basic;
-  // color: #404041;
   color: #dark-gray;
 }
