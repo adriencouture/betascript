@@ -28,7 +28,7 @@ gem 'sorcery'
 
 # Cocoon makes it easier to handle nested forms.
 gem 'cocoon'
-# Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+# Simple, Heroku-friendly Rails app configuration using ENV and a single YML file
 gem 'figaro'
 # Simple and flexible way to upload files from Ruby applications.
 gem 'carrierwave'
