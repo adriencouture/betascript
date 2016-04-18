@@ -256,18 +256,6 @@ a.remove_fields {
   }
 }
 
-// .project-item {
-//   background-color: $basic;
-//   border: 1px solid $light-gray;
-//   width: 100%;
-//   float:left;
-//   @include outer-container;
-//   @include span-columns(12);
-//   margin-bottom: 1rem;
-//   list-style-type: none;
-//   color: $base-font-color;
-//   height: 260px;
-// }
 #projects-list a {
   @include span-columns(6);
   @include omega(2n);
@@ -276,8 +264,6 @@ a.remove_fields {
 .project-item {
   background-color: $basic;
   border: 1px solid $light-gray;
-  // float:left;
-
   margin-bottom: 1rem;
   list-style-type: none;
   color: $base-font-color;
@@ -294,7 +280,6 @@ a.remove_fields {
 
 .project-card-info {
   @include span-columns(4 of 6);
-  // float:left;
   padding: 0 1rem;
   // overflow: auto;
 }
