@@ -18,6 +18,10 @@
       color: #000;
       text-decoration: none;
       }
+
+      &:hover {
+        color: shade($medium-gray, 0%);
+      }
     }
 
     .navbar-navigation-right {
