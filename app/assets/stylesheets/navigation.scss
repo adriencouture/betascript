@@ -19,6 +19,8 @@
       text-decoration: none;
       }
 
+      &:active,
+      &:focus,
       &:hover {
         color: shade($medium-gray, 0%);
       }
@@ -118,7 +120,6 @@
   @include media(min-width 550px) {
     position: fixed;
     background-color: $basic;
-    // background-color: #708B75; //#0067A3;
     width: 100%;
     z-index: 5;
     border-bottom: 1px solid $light-gray;
@@ -127,8 +128,6 @@
       float: left;
       padding: 0.5rem 0 0.5rem 1rem;
       background-color:$basic;
-      // background-color: #708B75; //#0067A3;
-      // border-bottom: 1px solid $light-gray;
 
       a {
       color: #000;
@@ -153,7 +152,7 @@
 
       a {
         text-decoration: none;
-        color: $medium-gray; //$basic; //#9AC9EC;
+        color: $medium-gray;
         transition: color $base-duration $base-timing;
 
       &:hover {
