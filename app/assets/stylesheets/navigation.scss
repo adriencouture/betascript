@@ -1,3 +1,5 @@
+// ---------- MOBILE MEDIA ---------- //
+
 .navbar {
   @include media(max-width 549px) {
   position: fixed;
@@ -19,11 +21,11 @@
       text-decoration: none;
       }
 
-      &:active,
-      &:focus,
-      &:hover {
-        color: shade($medium-gray, 0%);
-      }
+      // &:active,
+      // &:focus,
+      // &:hover {
+      //   color: shade($medium-gray, 0%);
+      // }
     }
 
     .navbar-navigation-right {
@@ -57,7 +59,7 @@
       font-size: 1.5rem;
     }
 
-    // Hamburger Menu
+// ---------- HAMBURGER MENU ---------- //
 
     #nav-toggle {
       position: absolute;
@@ -116,6 +118,8 @@
       transform: rotateZ(-45deg);
     }
   }
+
+// ---------- DESKTOP MEDIA ---------- //
 
   @include media(min-width 550px) {
     position: fixed;

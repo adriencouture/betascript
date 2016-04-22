@@ -1,9 +1,9 @@
-// //= require blink
-//
+//= require blink
+// *= require jquery-ui
+
 @import 'normalize';
 @import 'bourbon';
 @import 'base/base';
 @import 'neat';
-// @import 'projects';
 @import 'navigation';
 @import 'projects';

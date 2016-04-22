@@ -42,6 +42,7 @@ gem 'typedJS'
 gem 'bourbon'
 gem 'neat'
 gem 'autoprefixer-rails'
+gem 'jquery-ui-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

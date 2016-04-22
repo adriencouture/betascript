@@ -32,6 +32,8 @@ $(document).on('ready page:load', function() {
 
   })
 
+  $('#script-scenes').sortable();
+
 
 
 
